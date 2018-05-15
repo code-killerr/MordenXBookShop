@@ -19,7 +19,7 @@
                 <li class="hd_li">
                     <a class="hdActive" href="#">主页</a>
                 </li><li class="hd_li">
-                    <a  href="paihangb.html">排行榜</a>
+                    <a  href="Ranking.html">排行榜</a>
                 </li><li class="hd_li">
                     <a  href="html/newslist.html">免费</a>
                 </li><li class="hd_li">

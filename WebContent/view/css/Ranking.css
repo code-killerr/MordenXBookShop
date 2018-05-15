@@ -1,0 +1,17 @@
+.jsbody{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+}
+.Ranking{
+	background:ghostwhite;
+	width:100%;
+	height:800px;
+	border: 1px solid black;
+    background-size: 100% 100%;
+	text-align: center;
+	padding-top: 30px;
+	position: absolute;
+	margin-top: 500px;
+}
