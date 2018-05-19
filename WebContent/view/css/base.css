@@ -25,13 +25,12 @@ dd {
 
 html,
 body {
-	background: #fff;
+	background: #FFFFFF;
 	color: #333;
 	font-size: 12px;
 	font-family: "微软雅黑", "宋体", "Arial Narrow";
 	width: 100%;
 	height: 100%;
-	min-height: 500px;
 	min-width: 1300px;
 }
 
@@ -92,22 +91,21 @@ a {
 
 .header {
 	position: fixed;
-	height: 20px;
+	height: 0px;
 	padding: 20px 0;
 	left: 0;
 	top: 0;
 	z-index: 9999;
 	min-width: 1200px;
 	background-color:#000000;
-	opacity: 0.8;
 }
 
 .header .header_nav {
-	height: 68px;
+	height: 30px;
 	margin-left: 266px;
 	margin-right: 180px;
+	margin-top: -10px;
 	text-align: center;
-	opacity: 1;
 }
 
 .header .header_nav .hd_ul {
@@ -115,19 +113,21 @@ a {
 }
 
 .header .header_nav .hd_ul .hd_li {
-	height: 24px;
-	display: inline-block
+	height: 20px;
+	display: inline-block;
 }
 
 .header .header_nav .hd_ul .hd_li a {
 	display: block;
-	height: 24px;
-	line-height: 24px;
+	height: 20px;
+	line-height: 20px;
 	padding: 0 24px;
 	color: #FFFFFF;
-	font-size: 18px
+	font-size: 18px;
 }
-
+.header .header_nav .hd_ul .hd_li a:hover{
+	color:#FF9C00;
+}
 .header .header_nav .hd_ul .hd_li a.hdActive {
 	color: #FF9C00
 }

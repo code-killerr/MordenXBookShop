@@ -18,7 +18,7 @@
             <ul class="hd_ul">
                 <li class="hd_li">
                     <a class="hdActive" href="#">主页</a>
-                </li><li class="hd_li">
+                </li><li class="hd_li"style="opacity: 1;">
                     <a  href="Ranking.html">排行榜</a>
                 </li><li class="hd_li">
                     <a  href="html/newslist.html">免费</a>
