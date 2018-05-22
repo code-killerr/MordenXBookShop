@@ -1,29 +1,869 @@
-.Ranking_all{
-	background-color: #999999;
+.Ranking_all {
+	background: #636363 fixed repeat-x;
 	width: 100%;
-	height: 100%;
 	overflow: auto;
 }
-.Ranking_body{
+
+.Ranking_body {
 	margin-top: 60px;
-	height: 80%;
-	border: 1px solid #000000;
-	min-height: 100%;
-	min-width: 1300px;
+	width: 1100px;
+	min-width: 1100px;
+	margin-left: 129px;
+	float: left;
 }
-.Ranking_Left{
-	width:15%;
-	height:100%;
+
+.Ranking_Left {
+	width: 15%;
+	height: 100%;
 	border: 1px solid #000000;
 	text-align: center;
-	margin-left: 20px;
 	float: left;
+	background: #000000;
 }
-.Ranking_Middle{
-	width:80%;
-	height:100%;
+
+.Ranking_Middle {
+	width: 82.8%;
+	height: 100%;
 	border: 1px solid #000000;
 	margin: auto;
-	margin-left:20px ;
+	margin-left: 20px;
 	float: left;
+	background-color: #000000 ;
+}
+.word{
+	text-align: center;
+	color:#FFFFFF;
+	font-family: "宋体"; 
+	font-size: 34px;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+input,
+p,
+blockquote,
+table,
+th,
+td,
+embed,
+object,
+button {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	color: #343434;
+	font-family: "宋体", Arial, Helvetica;
+	word-wrap: break-word;
+}
+
+fieldset,
+img,
+abbr {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+i,
+b {
+	font-weight: normal;
+	font-style: normal;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+	color: #ff9c00;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+	outline: none;
+}
+
+textarea {
+	resize: none;
+}
+
+.cl0,
+.cl5,
+.cl10,
+.cl15,
+.cl20,
+.line,
+.spline,
+.dbline {
+	clear: both;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+
+.cl0 {
+	height: 0px;
+}
+
+.cl5 {
+	height: 5px;
+}
+
+.cl10 {
+	height: 10px;
+}
+
+.cl15 {
+	height: 15px;
+}
+
+.cl20 {
+	height: 20px;
+}
+
+.line {
+	border-bottom: 1px solid #d8d8d8;
+	height: 1px;
+}
+
+.spline {
+	border-bottom: 1px dashed #d8d8d8;
+	height: 1px;
+}
+
+.dbline {
+	border-bottom: 2px solid #e1e1d9;
+	height: 2px;
+}
+
+.wrap {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.tl {
+	text-align: left;
+}
+
+.tc {
+	text-align: center;
+}
+
+.tr {
+	text-align: right;
+}
+
+.fs14 {
+	font-size: 14px;
+}
+
+.box {
+	border: 1px solid #d8d8d8;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	zoom: 1;
+	width: 300px;
+	float: left;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: left;
+}
+
+.fn {
+	float: none;
+}
+
+.fb {
+	font-weight: bold;
+}
+
+.more {
+	border-top: 1px solid #d8d8d8;
+	padding: 10px 0;
+	margin: 0 12px;
+	text-align: right;
+}
+
+.more a {
+	color: #647988;
+}
+
+.bor_left {
+	border-left: 1px solid #d8d8d8;
+}
+
+.tx {
+	border: 1px solid #cccccc;
+	border-radius: 2px;
+	padding: 1px;
+	width: 50px;
+	height: 50px;
+	float: left;
+	background-color: #fff;
+	margin-right: 8px;
+}
+
+.tx img {
+	width: 50px;
+	height: 50px;
+}
+
+.watermark,
+.disnone {
+	display: none;
+}
+
+.marl {
+	margin-left: 10px;
+}
+
+.mar_right15 {
+	margin-right: 15px;
+}
+
+.mar_left15 {
+	margin-left: 15px;
+}
+
+.mar_right10 {
+	margin-right: 10px;
+}
+
+.mar_left10 {
+	margin-left: 10px;
+}
+
+.quick_fixed a.returnbottom {
+	background: url(http://static.zongheng.com/v2013/images/btn_bg1.png) no-repeat 0 -60px;
+}
+
+.quick_fixed a.returnbottom:hover {
+	background: url(http://static.zongheng.com/v2013/images/btn_bg1.png) no-repeat 0 0;
+}
+
+.quick_fixed #tips .tips {
+	width: 56px;
+	overflow: hidden;
+	border-top-right-radius: 3px;
+}
+
+.whitesj,
+.logonbox .login span,
+.maillink,
+.logonbox .info .shelf .book,
+.zh_money,
+.logonbox .record i,
+.logonbox .mail_detail .title .closemail,
+.logonbox .quick_oprate .oprate_open em,
+.logonbox .default_wrap .read_client b,
+.menu .money,
+.searchbar .search,
+.search .select em,
+.title span .triangle_down,
+em.list_icon,
+.tab .date em.current,
+.date .triangle_down,
+.jinghua,
+.ding,
+.member_in,
+.level_moon,
+.level_sun,
+.level_star,
+.send_mail,
+.add,
+.tj_ticket {
+	background: url(http://static.zongheng.com/v2013/images/icon_all.gif) no-repeat;
+	zoom: 1;
+	display: inline-block;
+	*display: inline;
+	vertical-align: middle;
+}
+
+
+/*å¸ƒå±€*/
+
+.three_side {
+	width: 215px;
+}
+
+.two_side {
+	width: 225px;
+}
+
+.two_main {
+	width: 1026px;
+	margin-left: 48px;
+	text-align: center;
+}
+
+.three_middle {
+	width: 530px;
+}
+
+.three_middle_none {
+	width: 552px;
+}
+
+.two_b_side {
+	width: 320px;
+}
+
+.two_b_main {
+	width: 660px;
+}
+
+.two_g_side {
+	width: 215px;
+}
+
+.two_g_main {
+	width: 765px;
+}
+
+.two_width {
+	width: 750px;
+	float: left;
+}
+
+.two_narrow {
+	width: 215px;
+	float: right;
+}
+
+.list {
+	position: relative;
+}
+
+.list .tab_block {
+	margin: 0 12px;
+	border-bottom: 1px dashed #d8d8d8;
+	zoom: 1;
+}
+
+.list .tab_block h2 {
+	font-weight: normal;
+	height: 28px;
+	line-height: 28px;
+}
+
+.list .tab_block h2 a,
+.tab .book_list ul li a {
+	color: #3c5362;
+}
+
+.tab_f .book_list ul li a {
+	float: left;
+}
+
+.list .tab_block h2 .book_style,
+.tab .book_list ul li .book_style {
+	color: #787878;
+	margin-right: 7px;
+}
+
+.list .tab_block .detail {
+	display: none;
+	padding: 5px 10px 10px;
+	position: relative;
+	zoom: 1;
+	height: 92px;
+}
+
+.list .tab_block .detail img {
+	float: left;
+}
+
+.list .tab_block .detail .mark63 {
+	_position: absolute;
+	_left: 0;
+	_top: 5px;
+}
+
+.list .tab_block .detail h3 {
+	padding-bottom: 3px;
+	padding-top: 5px;
+	_padding-left: 81px;
+}
+
+.list .tab_block .detail h3 a {
+	color: #b01f2e;
+}
+
+.list .tab_block .detail p {
+	line-height: 18px;
+	color: #787878;
+	_padding-left: 81px;
+}
+
+.list .tab_block .detail p a {
+	color: #787878;
+}
+
+.list .tab_block .detail p.tr {
+	padding-top: 10px;
+}
+
+.list .tab_block .detail p.tr a {
+	color: #3c5362;
+}
+
+.list .tab_block.last,
+.tab .book_list ul li.last {
+	border-bottom: 0 none;
+}
+
+.tab .tab1,
+.tab .tab2 {
+	background: url(http://static.zongheng.com/v2013/images/phbg.gif) no-repeat #fff;
+}
+
+.tab .title,
+.tab .head {
+	margin: 0 10px;
+	font-size: 14px;
+	padding-top: 2px;
+}
+
+.tab .card .title,
+.tab .head {
+	border-bottom: 1px solid #c8c8c8;
+	margin-bottom: 10px;
+}
+
+.tab .title em {
+	color: #979797;
+	padding: 0 5px;
+}
+
+.tab .title span,
+.tab .head span {
+	color: #b01f2e;
+	position: relative;
+	font-weight: bold;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	padding: 0 5px;
+	line-height: 35px;
+}
+
+.tab .title span span,
+.tab span.date {
+	padding: 0;
+}
+
+.tab span.date {
+	_padding-top: 8px;
+	_height: 35px;
+	_overflow: hidden;
+}
+
+.tab span.date:after,
+.tab .head:after {
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0
+}
+
+.title span .triangle_down {
+	position: absolute;
+	display: none;
+	background-position: -94px -30px;
+	width: 9px;
+	height: 6px;
+	left: 50%;
+	margin-left: -4px;
+	bottom: -1px;
+	_bottom: -2px;
+	overflow: hidden;
+}
+
+.title .date .triangle_down,
+.head .date .triangle_down {
+	position: absolute;
+	left: 50%;
+	margin-left: -4px;
+	top: 25px;
+	*top: 27px!important;
+	display: none;
+	background-position: -94px -40px;
+	width: 9px;
+	height: 6px;
+}
+
+.tab_c .title .date span .triangle_down {
+	_top: 29px;
+	_left: 12%;
+}
+
+.tab .bmrank {
+	width: 215px;
+	height: 47px;
+	position: relative;
+	display: block;
+	margin: 6px -1px 0;
+}
+
+.tab .bmrank .bmfocus {
+	background: url(http://static.zongheng.com/v2013/images/anim_tit.gif) no-repeat;
+	height: 47px;
+	overflow: hidden;
+}
+
+.tab .bmrank .bmblur {
+	background: url(http://static.zongheng.com/v2013/images/anim_tit0.gif) no-repeat;
+	height: 47px;
+	overflow: hidden;
+}
+
+.tab .bmrank span {
+	padding: 0 0 0 82px;
+	line-height: 47px;
+	font-size: 18px;
+	color: #b01f2e;
+	font-weight: bold;
+}
+
+.tab .bmrank .bmblur span {
+	width: 54px;
+	text-align: center;
+	float: left;
+}
+
+.tab .card .title span {
+	font-weight: normal;
+	color: #303030;
+	cursor: pointer;
+}
+
+.tab .card .title span.current {
+	font-weight: bold;
+	color: #b01f2e;
+}
+
+.title span.current .triangle_down,
+.date .current .triangle_down {
+	display: block;
+}
+
+.tab .book_list {
+	color: #343434;
+}
+
+.tab .card .book_list {
+	display: none;
+}
+
+.tab .book_list ul {
+	margin: 0 12px 8px;
+	zoom: 1;
+}
+
+.tab .tab_fl .book_list ul {
+	zoom: 1;
+	*margin: 4px 12px 8px;
+	_margin: 0 12px 6px;
+}
+
+.tab .tab_fl.tabcontainer .book_list ul {
+	*margin: 10px 12px;
+	_margin-bottom: 6px;
+}
+
+.tab .tab_b .book_list ul {
+	margin-bottom: 2px;
+	*margin-bottom: 16px!important;
+	margin-bottom: 16px\9;
+	_margin-bottom: 2px;
+}
+
+.tab .tab_t .book_list ul {
+	padding-bottom: 0;
+}
+
+.tab .book_list ul li {
+	border-bottom: 1px dashed #d8d8d8;
+	line-height: 28px;
+	height: 28px;
+}
+
+.tab .book_list.xy ul li {
+	*height: 29px;
+	*line-height: 29px;
+	_height: 28px;
+	_line-height: 28px;
+}
+
+.tab .title a {
+	font-size: 12px;
+	color: #647988;
+	margin-top: 8px;
+}
+
+.tab .title span.black,
+.tab .head span.black {
+	color: #303030;
+}
+
+.tab .book_list ul li em.list_icon,
+.list .tab_block .detail em.add {
+	background-position: -44px -120px;
+	color: #fff;
+	margin: 6px 5px 0 0;
+	text-align: center;
+	line-height: 16px;
+	width: 17px;
+	height: 17px;
+	float: left;
+	font-size: 14px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.tab .book_list ul li em.top {
+	background-position: -45px -100px;
+}
+
+.tab .book_list ul li span {
+	float: right;
+	color: #b01f2e;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab .date em {
+	color: #303030;
+	font-size: 12px;
+	zoom: 1;
+	display: inline-block;
+	*display: inline;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 18px;
+	position: relative;
+	padding: 0;
+	_float: left;
+}
+
+.tab .date em.current {
+	background-position: -80px -100px;
+	color: #fff;
+}
+
+.tab .title h2 {
+	font-size: 14px;
+}
+
+.tab .tab2 .book_list ul {
+	margin-bottom: 14px;
+	*margin-bottom: 11px!important;
+	margin-bottom: 11px\9;
+}
+
+.tab .tab3 {
+	background: url(http://static.zongheng.com/v2013/images/tab3_bg.jpg) no-repeat right top;
+	height: 362px;
+	overflow: hidden;
+}
+
+.tab .tab4 {
+	background: url(http://static.zongheng.com/v2013/images/tab4_bg.jpg) no-repeat left top;
+	height: 362px;
+	overflow: hidden;
+}
+
+.tab .tab4 .head span.black {
+	color: #303030;
+}
+
+.tab .tab4 .book_list ul li,
+.comic .tab.fr .book_list ul li {
+	line-height: 26px;
+	height: 26px;
+}
+
+.tab .tab3 .book_list ul li,
+.comic .tab .book_list ul li {
+	line-height: 27px;
+	height: 27px;
+}
+
+.tab .xy {
+	background: url(http://static.zongheng.com/v2013/images/xy_bg.gif) no-repeat left bottom;
+	height: 484px;
+	*height: 498px;
+	_height: 484px;
+	overflow: hidden;
+}
+
+.tab .book_list.today ul {
+	margin-bottom: 11px;
+	*margin-bottom: 8px!important;
+	margin-bottom: 6px\9;
+}
+
+.tab5,
+.tab6 {
+	border-color: #ded3b9;
+	background-color: #f6f3ec;
+}
+
+.tab5 h2,
+.tab6 h2 {
+	font-size: 14px;
+	color: #b11e30;
+	padding-left: 10px;
+	line-height: 34px;
+	height: 34px;
+	border-bottom: 1px solid #ded3b9;
+}
+
+.tab6 {
+	padding: 0 10px;
+}
+
+.tab .book_list.fans span {
+	color: #303030;
+}
+
+.tab .book_list.fans span img {
+	margin-top: 6px;
+}
+
+.tab6 h2 {
+	border: 0 none;
+	color: #303030;
+	padding: 0;
+}
+
+.tab .book_list ul li em.add,
+.list .tab_block .detail em.add {
+	background-position: -198px -162px;
+	text-indent: -9999px;
+}
+
+.list .tab_block .detail em.add {
+	position: absolute;
+	left: 50px;
+	top: 70px;
+	z-index: 1000;
+}
+
+
+/*çºµæ¨ªäºŒç»´ç */
+
+.zh_ewm {
+	background: url(http://static.zongheng.com/v2013/images/zh_ewm.gif) no-repeat;
+	width: 100px;
+	height: 118px;
+	_position: absolute;
+	position: fixed;
+	left: 5px;
+	bottom: 0px;
+	_position: absolute;
+	_top: expression(documentElement.scrollTop+documentElement.clientHeight-118);
+	_right: expression(documentElement.clientWidth-105);
+	z-index: 9999;
+}
+
+.zh_ewm a {
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin-top: 18px;
+}
+
+.zh_ewm em {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 21px;
+	height: 18px;
+	cursor: pointer;
+}
+
+.zh_aqr {
+	background: url(http://static.zongheng.com/v2013/images/aqr.jpg) no-repeat;
+	width: 137px;
+	height: 158px;
+	position: fixed;
+	_position: absolute;
+	left: 5px;
+	bottom: 0;
+	z-index: 9999;
+}
+
+.zh_aqr a {
+	display: block;
+	width: 137px;
+	height: 158px;
+}
+
+.zh_aqr em {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 19px;
+	height: 19px;
+	cursor: pointer;
+	z-index: 10000;
+}
+
+.zh_tit {
+	height: 35px;
+	line-height: 35px;
+	background: #C8C8C8 repeat-x;
+	padding-left: 20px;
+}
+
+.zh_tit .bd_title {
+	font-size: 14px;
+	background: #C8C8C8 no-repeat right bottom;
+	height: 35px;
+}
+
+.ph_list {
+	width: 243px;
+	float: left;
+	background:  no-repeat center top #fff;
 }
