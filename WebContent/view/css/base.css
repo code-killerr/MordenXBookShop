@@ -115,6 +115,7 @@ a {
 .header .header_nav .hd_ul .hd_li {
 	height: 20px;
 	display: inline-block;
+	margin-left: 15px;
 }
 
 .header .header_nav .hd_ul .hd_li a {

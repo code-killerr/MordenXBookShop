@@ -19,7 +19,14 @@
 	text-align: center;
 	float: left;
 }
-
+.left_body{
+	border: 2px solid white;
+	background: #E5E5E5 ;
+	border-radius:10px ;
+	opacity: 0.7;
+	height: 500px;
+	width: 100%;
+	}
 .Ranking_Middle {
 	width: 82.8%;
 	height: 100%;
@@ -862,7 +869,7 @@ em.list_icon,
 .ph_list {
 	width: 243px;
 	float: left;
-	background:  no-repeat center top #fff;
+	background:#E5E5E5;
 }
 html,body {
 	margin:0;
