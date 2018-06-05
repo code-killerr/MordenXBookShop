@@ -113,12 +113,6 @@ table {
 	width: 100%;
 }
 
-a,
-a:link,
-a:visited,
-a:active {
-	color: #ff9c00;
-}
 
 a:hover {
 	text-decoration: underline;
