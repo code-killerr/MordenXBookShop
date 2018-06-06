@@ -6,12 +6,12 @@
 }
 .left_img{
 	float: left;
-	width:17%;
+	width:20%;
 	min-height: 250px;
 	height: 250px;
 	border: 2px solid #FFFFFF;
-	margin-top: 23px;
-	margin-left: 44px;
+	margin-top: 78px;
+	margin-left: 30px;
 	border-radius: 10px;
 }
 .left_img img{
@@ -32,7 +32,7 @@
 	float: left;
 	border: 2px solid #d8d8d8;
 	width: 70%;
-	margin-left: 50px;
+	margin-left: 30px;
 	margin-top: 30px;
 	height: 350px;
 }
