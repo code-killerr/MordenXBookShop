@@ -1,4 +1,8 @@
+body{
+	min-width:1000px;
+}
 .all{
+	width: 100%;
 	float: left;
 	min-width: 1000px;
 	min-height: 100%;
@@ -60,18 +64,17 @@
 .top_middle .word .information .inli{
 	float: left;
 	color: #FF0000;
-	font-size: 10px;
+	font-size: 19px;
 	font-family:"宋体" ;
 }
 .lileft{
-	margin-left: 140px;
+	margin-left: 118px;
 }
 .wordleft{
 	margin-left: 9px;
 }
 .middle{
 	float: left;
-	height: 500px;
 	width: 84%;
 	background: #EEEEEE;
 	margin-left: 108px;
@@ -123,3 +126,106 @@
     border: 1px solid #fff;
 }
 
+.BookList{
+	width: 80%;
+	margin-left: 10%;
+	border:2px solid #D8D8D8;
+	margin-bottom: 20px;
+}
+.volume {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.cover {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+}
+.volume h3 .subscri, .volume h3 .subscribe {
+    position: relative;
+    z-index: 2;
+    float: right;
+}
+.volume h3 .subscri .btn, .volume h3 .subscribe .btn {
+    font: 14px/28px PingFangSC-Regular,'-apple-system',Simsun;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    display: block;
+    width: 96px;
+    height: 28px;
+    transition: background-color .5s;
+    text-align: center;
+    color: #fff;
+    background: #bf2c24;
+}
+.volume h3 .subscri .btn b, .volume h3 .subscribe .btn b {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin-right: 3px;
+    vertical-align: 0;
+}
+.iconfont {
+    font-family: qd_iconfont!important;
+    font-size: 24px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .1px;
+}
+.chapter h3 span.free, .volume h3 span.free {
+    background: #8ccd0a;
+}
+.chapter-wrap .chapter h3 span, .volume h3 span {
+    font: 12px/16px PingFangSC-Regular,'-apple-system',Simsun;
+    display: inline-block;
+    min-width: 24px;
+    margin: -1px 8px 0;
+    padding: 0 3px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+}
+.chapter h3 .count, .volume h3 .count {
+    font: 14px/19px PingFangSC-Regular,'-apple-system',Simsun;
+    color: #666;
+}
+.chapter ul, .volume ul {
+    overflow: hidden;
+}
+.cf {
+    zoom: 1;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+.chapter li, .volume li{
+    font: 14px/40px PingFangSC-Regular,'-apple-system',Simsun;
+    float: left;
+    overflow: hidden;
+    width: 82px;
+    height: 40px;
+    border-bottom: 1px solid #ebebeb;
+    border: 1px solid #000000;
+    margin-left: 13px;
+    border-radius: 5px;
+    margin-top: 9px;
+    padding-left:47px ;
+    background: #E5E5E5;
+}
+.chapter-wrap .chapter li a, .volume li a{
+    float: left;
+    overflow: hidden;
+    max-width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #000000;
+}
+.volume li:hover{
+	background: #CCCCCC;
+}
