@@ -1,0 +1,1120 @@
+.all {
+	width: 100%;
+	min-height: 100%;
+	background: #000000;
+	overflow: auto;
+}
+.MiddleBottom{
+	border: 2px solid #FFFFFF;
+	height: 107px;
+	width: 751px;
+	margin-left: 10px;
+	border-radius:5px;
+	margin-top: 5px;
+	background: #FFFFFF;
+}
+.MiddleBottom .title{
+	text-align: left;
+	width: 126px;
+}
+.MiddleBottom .title h1{
+	font-size: 15px;
+}
+.MiddleBottom .title em{
+    background: url(http://static.zongheng.com/v2013/images/icon_all.gif) no-repeat -122px -33px;
+    width: 52px;
+    height: 14px;
+    float: left;
+    margin: 2px 8px 0 0;
+    }
+.MiddleBottom .NewBook{
+	margin-top: 5px;
+	margin-left: 60px;
+} 
+.MiddleBottom .BookImg{
+	border: 2px solid #999999;
+	height: 96px;
+	width: 70px;
+	marg
+}
+.MiddleBottom .BookImg img{
+		width: 100%;
+		height: 100%;
+}
+.MiddleBottom .BookIntroduce{
+	height: 96px;
+	width: 150px;
+	margin-left: 5px;
+}
+.MiddleBottom .BookIntroduce h1,.MiddleBottom .BookIntroduce h1 a{
+	color: #FF7F50;
+	font-size: 13px;
+}
+.MiddleBottom .BookIntroduce h2,.MiddleBottom .BookIntroduce h2 a{
+	color: #636363;
+	font-size: 13px;
+}
+.MiddleBottom .BookIntroduce h3,.MiddleBottom .BookIntroduce h3 a{
+	color: #999999;	
+	font-size: 10px;
+}
+.MiddleBottom .BookIntroduce hr{
+	border-width:1px;
+	color: #999999;
+}
+.three_side {
+	width: 215px;
+}
+
+.fl {
+	float: left;
+}
+
+.two_main {
+	width: 755px;
+}
+
+.fr {
+	float: right;
+}
+
+.three_middle {
+	width: 530px;
+}
+
+.three_middle {
+	width: 530px;
+}
+
+.three_side {
+	width: 215px;
+	background: #FFFFFF;
+	border-radius: 10px;
+}
+
+.news {
+	background-color: #f7f6f1;
+	height: 350px;
+	overflow: hidden;
+}
+
+.box {
+	border: 1px solid #d8d8d8;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	zoom: 1;
+}
+
+.cl10 {
+	height: 10px;
+}
+
+.cl0,
+.cl5,
+.cl10,
+.cl15,
+.cl20,
+.line,
+.spline,
+.dbline {
+	clear: both;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+
+.scroll_pic {
+	height: 299px;
+	overflow: hidden;
+}
+
+.cont-block {
+	background-color: #fff;
+}
+
+.cont-block .tab-conts {
+	float: left;
+	height: 280px;
+	top: 0px;
+	width: 210px;
+	overflow: hidden;
+	padding: 10px 0 9px 15px;
+	_background-color: #fff;
+}
+
+.cont-block .tab-conts .tab-cont {
+	text-align: center;
+	display: none;
+}
+
+.cont-block .ctabs .ctab .tab_list {
+	padding: 0 30px 0 10px;
+	line-height: 36px;
+	background: url(http://static.zongheng.com/v2013/images/qh.gif) repeat-x;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.cont-block .ctabs .ctab a:link,
+.ctabs .ctab a:visited {
+	color: #222325;
+	text-decoration: none;
+	display: inline-block;
+	overflow: hidden;
+	height: 36px;
+}
+
+.cont-block .ctabs .ctab a {
+	display: block;
+	width: 255px;
+}
+
+.tr {
+	text-align: right;
+}
+
+.cl15 {
+	height: 15px;
+}
+
+.news dl {
+	padding: 0 8px 0 0;
+}
+
+.news dl dt {
+	margin-bottom: 6px;
+	color: #b01f2e;
+}
+
+.fs14 {
+	font-size: 14px;
+}
+
+.tc {
+	text-align: center;
+}
+
+.fred,
+a.fred:link,
+a.fred:visited {
+	color: #b01f2e;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+.news .line {
+	margin: 41px 12px 10px;
+}
+
+.line {
+	border-bottom: 1px solid #d8d8d8;
+	height: 1px;
+}
+
+.news .more {
+	border: 0 none;
+}
+
+.more {
+	border-top: 1px solid #d8d8d8;
+	padding: 10px 0;
+	margin: 0 12px;
+	text-align: right;
+}
+
+.more a {
+	color: #647988;
+}
+
+.cl0 {
+	height: 0px;
+}
+
+
+/* 图片切换 */
+
+.scroll_pic {
+	height: 350px;
+	overflow: hidden;
+	background: #FFFFFF;
+}
+
+.cont-block {
+	background-color: #fff;
+}
+
+.cont-block .tab-conts {
+	float: left;
+	height: 280px;
+	top: 0px;
+	width: 210px;
+	overflow: hidden;
+	padding: 10px 0 9px 15px;
+	_background-color: #fff;
+}
+
+.cont-block .tab-conts .tab-cont {
+	text-align: center;
+	display: none;
+	opacity: 0.25;
+}
+
+.cont-block .tab-conts .tab-cont img {
+	width: 210px;
+	height: 280px;
+}
+
+.cont-block .tab-conts .current {
+	display: block;
+}
+
+.cont-block .ctabs {
+	float: right;
+	width: 295px;
+	border-left: 1px solid #d8d8d8;
+}
+
+.cont-block .ctabs .ctab {
+	border-bottom: 1px solid #d8d8d8;
+}
+
+.cont-block .ctabs .ctab .tab_list {
+	padding: 0 30px 0 10px;
+	line-height: 36px;
+	background: url(http://static.zongheng.com/v2013/images/qh.gif) repeat-x;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.cont-block .ctabs .ctab a {
+	display: block;
+	width: 255px;
+}
+
+.cont-block .ctabs .ctab a:link,
+.ctabs .ctab a:visited {
+	color: #222325;
+	text-decoration: none;
+	display: inline-block;
+	overflow: hidden;
+	height: 36px;
+}
+
+.cont-block .ctabs .ctab a span {
+	margin-left: 10px;
+}
+
+.cont-block .ctabs .ctab a:link span,
+.cont-block .ctabs .ctab a:visited span {
+	color: #657887;
+	font-size: 12px;
+}
+
+.cont-block .ctabs .current .tab_list {
+	background: url(http://static.zongheng.com/v2013/images/qh_hover.gif) no-repeat;
+	height: 40px;
+	line-height: 42px;
+	position: relative;
+	width: 255px;
+	margin-left: -19px;
+	padding-left: 30px;
+}
+
+.cont-block .ctabs .current .tab_list a:link,
+.ctabs .current .tab_list a:visited {
+	color: #fff;
+}
+
+.cont-block .ctabs .current .tab_list a:link span,
+.ctabs .current .tab_list a:visited span {
+	color: #e7d6d7;
+}
+
+.cont-block .ctabs .last-tab {
+	border-bottom: none;
+}
+
+.cont-block .ctabs .con {
+	display: none;
+}
+
+.cont-block .ctabs .current .con {
+	padding: 10px 20px;
+	height: 91px;
+	overflow: hidden;
+	line-height: 20px;
+	display: block;
+	background-color: #f8efe7;
+}
+
+.cont-block .ctabs .current .con a {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	color: #3c5362;
+}
+
+
+/*reset及 clear*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+p,
+blockquote,
+table,
+th,
+td,
+embed,
+object,
+button {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	color: #343434;
+	font-family: "宋体", Arial, Helvetica;
+	word-wrap: break-word;
+}
+
+fieldset,
+img,
+abbr {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+i,
+b {
+	font-weight: normal;
+	font-style: normal;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+	outline: none;
+}
+
+textarea {
+	resize: none;
+}
+
+.cl0,
+.cl5,
+.cl10,
+.cl15,
+.cl20,
+.line,
+.spline,
+.dbline {
+	clear: both;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+
+.cl0 {
+	height: 0px;
+}
+
+.cl5 {
+	height: 5px;
+}
+
+.cl10 {
+	height: 10px;
+}
+
+.cl15 {
+	height: 15px;
+}
+
+.cl20 {
+	height: 20px;
+}
+
+.line {
+	border-bottom: 1px solid #d8d8d8;
+	height: 1px;
+}
+
+.spline {
+	border-bottom: 1px dashed #d8d8d8;
+	height: 1px;
+}
+
+.dbline {
+	border-bottom: 2px solid #e1e1d9;
+	height: 2px;
+}
+
+.wrap {
+	width: 980px;
+	margin: 100px auto;
+}
+
+.tl {
+	text-align: left;
+}
+
+.tc {
+	text-align: center;
+}
+
+.tr {
+	text-align: right;
+}
+
+.fs14 {
+	font-size: 14px;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.fn {
+	float: none;
+}
+
+.fb {
+	font-weight: bold;
+}
+
+.more {
+	border-top: 1px solid #d8d8d8;
+	padding: 10px 0;
+	margin: 0 12px;
+	text-align: right;
+}
+
+.more a {
+	color: #647988;
+}
+
+.bor_left {
+	border-left: 1px solid #d8d8d8;
+}
+
+.tx {
+	border: 1px solid #cccccc;
+	border-radius: 2px;
+	padding: 1px;
+	width: 50px;
+	height: 50px;
+	float: left;
+	background-color: #fff;
+	margin-right: 8px;
+}
+
+.tx img {
+	width: 50px;
+	height: 50px;
+}
+
+.watermark,
+.disnone {
+	display: none;
+}
+
+.marl {
+	margin-left: 10px;
+}
+
+.mar_right15 {
+	margin-right: 15px;
+}
+
+.mar_left15 {
+	margin-left: 15px;
+}
+
+.mar_right10 {
+	margin-right: 10px;
+}
+
+.mar_left10 {
+	margin-left: 10px;
+}
+
+
+/*布局*/
+
+.three_side {
+	width: 215px;
+}
+
+.two_main {
+	width: 755px;
+}
+
+.three_middle {
+	width: 530px;
+}
+
+.three_middle_none {
+	width: 552px;
+}
+
+.two_b_side {
+	width: 320px;
+}
+
+.two_b_main {
+	width: 660px;
+}
+
+.two_g_side {
+	width: 215px;
+}
+
+.two_g_main {
+	width: 765px;
+}
+
+.two_width {
+	width: 750px;
+	float: left;
+}
+
+.two_narrow {
+	width: 215px;
+	float: right;
+}
+
+
+/*榜单*/
+
+.list {
+	position: relative;
+}
+
+.list .tab_block {
+	margin: 0 12px;
+	border-bottom: 1px dashed #d8d8d8;
+	zoom: 1;
+}
+
+.list .tab_block h2 {
+	font-weight: normal;
+	height: 28px;
+	line-height: 28px;
+}
+
+.list .tab_block h2 a,
+.tab .book_list ul li a {
+	color: #3c5362;
+}
+
+.tab_f .book_list ul li a {
+	float: left;
+}
+
+.list .tab_block h2 .book_style,
+.tab .book_list ul li .book_style {
+	color: #787878;
+	margin-right: 7px;
+}
+
+.list .tab_block .detail {
+	display: none;
+	padding: 5px 10px 10px;
+	position: relative;
+	zoom: 1;
+	height: 92px;
+}
+
+.list .tab_block .detail img {
+	float: left;
+}
+
+.list .tab_block .detail .mark63 {
+	_position: absolute;
+	_left: 0;
+	_top: 5px;
+}
+
+.list .tab_block .detail h3 {
+	padding-bottom: 3px;
+	padding-top: 5px;
+	_padding-left: 81px;
+}
+
+.list .tab_block .detail h3 a {
+	color: #b01f2e;
+}
+
+.list .tab_block .detail p {
+	line-height: 18px;
+	color: #787878;
+	_padding-left: 81px;
+}
+
+.list .tab_block .detail p a {
+	color: #787878;
+}
+
+.list .tab_block .detail p.tr {
+	padding-top: 10px;
+}
+
+.list .tab_block .detail p.tr a {
+	color: #3c5362;
+}
+
+.list .tab_block.last,
+.tab .book_list ul li.last {
+	border-bottom: 0 none;
+}
+
+.tab .tab1,
+.tab .tab2 {
+	background: url(http://static.zongheng.com/v2013/images/phbg.gif) no-repeat #fff;
+}
+
+.tab .title,
+.tab .head {
+	margin: 0 10px;
+	font-size: 14px;
+	padding-top: 2px;
+}
+
+.tab .card .title,
+.tab .head {
+	border-bottom: 1px solid #c8c8c8;
+	margin-bottom: 10px;
+}
+
+.tab .title em {
+	color: #979797;
+	padding: 0 5px;
+}
+
+.tab .title span,
+.tab .head span {
+	color: #b01f2e;
+	position: relative;
+	font-weight: bold;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	padding: 0 5px;
+	line-height: 35px;
+}
+
+.tab .title span span,
+.tab span.date {
+	padding: 0;
+}
+
+.tab span.date {
+	_padding-top: 8px;
+	_height: 35px;
+	_overflow: hidden;
+}
+
+.tab span.date:after,
+.tab .head:after {
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0
+}
+
+.title span .triangle_down {
+	position: absolute;
+	display: none;
+	background-position: -94px -30px;
+	width: 9px;
+	height: 6px;
+	left: 50%;
+	margin-left: -4px;
+	bottom: -1px;
+	_bottom: -2px;
+	overflow: hidden;
+}
+
+.title .date .triangle_down,
+.head .date .triangle_down {
+	position: absolute;
+	left: 50%;
+	margin-left: -4px;
+	top: 25px;
+	*top: 27px!important;
+	display: none;
+	background-position: -94px -40px;
+	width: 9px;
+	height: 6px;
+}
+
+.tab_c .title .date span .triangle_down {
+	_top: 29px;
+	_left: 12%;
+}
+
+.tab .bmrank {
+	width: 215px;
+	height: 47px;
+	position: relative;
+	display: block;
+	margin: 6px -1px 0;
+}
+
+.tab .bmrank .bmfocus {
+	background: url(http://static.zongheng.com/v2013/images/anim_tit.gif) no-repeat;
+	height: 47px;
+	overflow: hidden;
+}
+
+.tab .bmrank .bmblur {
+	background: url(http://static.zongheng.com/v2013/images/anim_tit0.gif) no-repeat;
+	height: 47px;
+	overflow: hidden;
+}
+
+.tab .bmrank span {
+	padding: 0 0 0 82px;
+	line-height: 47px;
+	font-size: 18px;
+	color: #b01f2e;
+	font-weight: bold;
+}
+
+.tab .bmrank .bmblur span {
+	width: 54px;
+	text-align: center;
+	float: left;
+}
+
+.tab .card .title span {
+	font-weight: normal;
+	color: #303030;
+	cursor: pointer;
+}
+
+.tab .card .title span.current {
+	font-weight: bold;
+	color: #b01f2e;
+}
+
+.title span.current .triangle_down,
+.date .current .triangle_down {
+	display: block;
+}
+
+.tab .book_list {
+	color: #343434;
+}
+
+.tab .card .book_list {
+	display: none;
+}
+
+.tab .book_list ul {
+	margin: 0 12px 8px;
+	zoom: 1;
+}
+
+.tab .tab_fl .book_list ul {
+	zoom: 1;
+	*margin: 4px 12px 8px;
+	_margin: 0 12px 6px;
+}
+
+.tab .tab_fl.tabcontainer .book_list ul {
+	*margin: 10px 12px;
+	_margin-bottom: 6px;
+}
+
+.tab .tab_b .book_list ul {
+	margin-bottom: 2px;
+	*margin-bottom: 16px!important;
+	margin-bottom: 16px\9;
+	_margin-bottom: 2px;
+}
+
+.tab .tab_t .book_list ul {
+	padding-bottom: 0;
+}
+
+.tab .book_list ul li {
+	border-bottom: 1px dashed #d8d8d8;
+	line-height: 28px;
+	height: 28px;
+}
+
+.tab .book_list.xy ul li {
+	*height: 29px;
+	*line-height: 29px;
+	_height: 28px;
+	_line-height: 28px;
+}
+
+.tab .title a {
+	font-size: 12px;
+	color: #647988;
+	margin-top: 8px;
+}
+
+.tab .title span.black,
+.tab .head span.black {
+	color: #303030;
+}
+
+.tab .book_list ul li em.list_icon,
+.list .tab_block .detail em.add {
+	background-position: -44px -120px;
+	color: #fff;
+	margin: 6px 5px 0 0;
+	text-align: center;
+	line-height: 16px;
+	width: 17px;
+	height: 17px;
+	float: left;
+	font-size: 14px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.tab .book_list ul li em.top {
+	background-position: -45px -100px;
+}
+
+.tab .book_list ul li span {
+	float: right;
+	color: #b01f2e;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab .date em {
+	color: #303030;
+	font-size: 12px;
+	zoom: 1;
+	display: inline-block;
+	*display: inline;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 18px;
+	position: relative;
+	padding: 0;
+	_float: left;
+}
+
+.tab .date em.current {
+	background-position: -80px -100px;
+	color: #fff;
+}
+
+.tab .title h2 {
+	font-size: 14px;
+}
+
+.tab .tab2 .book_list ul {
+	margin-bottom: 14px;
+	*margin-bottom: 11px!important;
+	margin-bottom: 11px\9;
+}
+
+.tab .tab3 {
+	background: url(http://static.zongheng.com/v2013/images/tab3_bg.jpg) no-repeat right top;
+	height: 362px;
+	overflow: hidden;
+}
+
+.tab .tab4 {
+	background: url(http://static.zongheng.com/v2013/images/tab4_bg.jpg) no-repeat left top;
+	height: 362px;
+	overflow: hidden;
+}
+
+.tab .tab4 .head span.black {
+	color: #303030;
+}
+
+.tab .tab4 .book_list ul li,
+.comic .tab.fr .book_list ul li {
+	line-height: 26px;
+	height: 26px;
+}
+
+.tab .tab3 .book_list ul li,
+.comic .tab .book_list ul li {
+	line-height: 27px;
+	height: 27px;
+}
+
+.tab .xy {
+	background: url(http://static.zongheng.com/v2013/images/xy_bg.gif) no-repeat left bottom;
+	height: 484px;
+	*height: 498px;
+	_height: 484px;
+	overflow: hidden;
+}
+
+.tab .book_list.today ul {
+	margin-bottom: 11px;
+	*margin-bottom: 8px!important;
+	margin-bottom: 6px\9;
+}
+
+.tab5,
+.tab6 {
+	border-color: #ded3b9;
+	background-color: #f6f3ec;
+}
+
+.tab5 h2,
+.tab6 h2 {
+	font-size: 14px;
+	color: #b11e30;
+	padding-left: 10px;
+	line-height: 34px;
+	height: 34px;
+	border-bottom: 1px solid #ded3b9;
+}
+
+.tab6 {
+	padding: 0 10px;
+}
+
+.tab .book_list.fans span {
+	color: #303030;
+}
+
+.tab .book_list.fans span img {
+	margin-top: 6px;
+}
+
+.tab6 h2 {
+	border: 0 none;
+	color: #303030;
+	padding: 0;
+}
+
+.tab .book_list ul li em.add,
+.list .tab_block .detail em.add {
+	background-position: -198px -162px;
+	text-indent: -9999px;
+}
+
+.list .tab_block .detail em.add {
+	position: absolute;
+	left: 50px;
+	top: 70px;
+	z-index: 1000;
+}
+
+.qtb {
+	background: url(http://static.zongheng.com/v2013/images/qtb_bg.gif) no-repeat;
+	height: 466px;
+	width: 211px;
+	padding: 2px 2px 0;
+}
+
+.qtb h4 {
+	height: 60px;
+	font-weight: normal;
+	background: url(http://static.zongheng.com/v2013/images/qt_h2_bg.gif) no-repeat;
+}
+
+.qtb .label {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.qtb h4 .tit {
+	position: absolute;
+	top: 13px;
+	left: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #b49f72;
+	text-shadow: 2px 2px 2px #000;
+	width: 100px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.qtb h4.current {
+	background: url(http://static.zongheng.com/v2013/images/qt_h2_hoverbg.gif) no-repeat;
+}
+.news dl dd {
+    color: #787878;
+    line-height: 20px;
+    line-height: 22px\9;
+    padding: 0 10px 0 23px;
+    .boutique, .hotbox {
+    background: url(http://static.zongheng.com/v2013/images/yellow_bg.gif) repeat-x scroll 0 0 #FFFFFF;
+    overflow: hidden;
+    padding: 15px 0 18px 15px;
+    padding-bottom: 16px\9;
+}
+.boutique .title h2 em, .hotbox .title h2 em {
+    background: url(http://static.zongheng.com/v2013/images/icon_all.gif) no-repeat -122px -33px;
+    width: 52px;
+    height: 14px;
+    float: left;
+    margin: 2px 8px 0 0;
+}
