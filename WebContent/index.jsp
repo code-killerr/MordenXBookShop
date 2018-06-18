@@ -159,106 +159,10 @@
 				<!--end-->
 			</div>
 		<!--内容部分END-->
- <!--
 		       
-        <div class="footer">
-            <div class="footer_wrap">
-                <div class="footer_logo">
-                </div>
-                <div class="link_friends">
-                    	友情链接
-                </div>
-                <ul class="link_con">
-                    <li>
-                        <a href="##">Vsensory</a>
-                    </li>
-                    <li>
-                        <a href="##">VR之家</a>
-                    </li>
-                    <li>
-                        <a href="##">VR兔</a>
-                    </li>
-                    <li>
-                        <a href="##">83830</a>
-                    </li>
-                    <li>
-                        <a href="##">VR乐趣网</a>
-                    </li>
-                    <li>
-                        <a href="##">VR日报</a>
-                    </li>
-                    <li>
-                        <a href="##">17173</a>
-                    </li>
-                    <li>
-                        <a href="##">游戏陀螺</a>
-                    </li>
-                    <li>
-                        <a href="##">913</a>
-                    </li>
-                    <li>
-                        <a href="##">安卓网</a>
-                    </li>
-                    <li>
-                        <a href="##">好色VR</a>
-                    </li>
-                    <li>
-                        <a href="##">麦逗VR</a>
-                    </li>
-                    <li>
-                        <a href="##">妖界VR</a>
-                    </li>
-                    <li>
-                        <a href="##">黑匣</a>
-                    </li>
-                    <li>
-                        <a href="##">百度VR</a>
-                    </li>
-                    <li>
-                        <a href="##">Vreyes</a>
-                    </li>
-                    <li>
-                        <a>Vrpinea</a>
-                    </li>
-                    <li>
-                        <a href="##">游戏蛮牛</a>
-                    </li>
-                    <li>
-                        <a href="##">游迅网</a>
-                    </li>
-                    <li>
-                        <a>snailshell</a>
-                    </li>
-                    <li>
-                        <a href="##">VR界</a>
-                    </li>
-                    <li>
-                        <a href="##">87870</a>
-                    </li>
-                    <li>
-                        <a href="##">盗梦级客</a>
-                    </li>
-                    <li>
-                        <a href="##">07073VR</a>
-                    </li>
-                    <li>
-                        <a href="##">VR齐乐网</a>
-                    </li>
-                    <li>
-                        <a href="##">VR达科斯</a>
-                    </li>
-                    <li>
-                        <a href="##">18183VR </a>
-                    </li>
-                </ul>
-                <div class="footer_copyRight">
-                    <p>© 2016 上海紫乾网络科技有限公司 版权所有 上海市桂箐路65号新研大厦B座6层 联系电话: 021-64959021</P>
-                    <P>沪ICP备15053320号沪网文[2015]0851-231号</p>
-                </div>
-            </div>
-        </div>
+        
 
     </div>
-    -->
+
 </body>
 </html>

@@ -173,7 +173,8 @@ a {
 
 .footer {
 	display: block;
-	background: #333
+	background: #333;
+	float: left;
 }
 
 .footer .footer_wrap {
