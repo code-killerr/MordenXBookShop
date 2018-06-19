@@ -6,6 +6,7 @@
 	min-width: 1000px;
 	text-align: center;
 	font-family: "宋体";
+	padding-bottom: 100px;
 }
 .all h1{
 	color: #C8C8C8;
@@ -19,11 +20,10 @@
 .user_body{
 	background: #333;
 	width: 1000px;
-	height: 1000px;
 	min-width: 1000px;
 	margin: 50px auto;
-	border-radius:10px;\
-	border: 2px solid #C8C8C8;
+	border-radius:10px;
+	padding-bottom: 50px;
 }
 .user_image{
 	float: left;
@@ -51,11 +51,11 @@
 
 .user_middle{
 	width: 800px;
-	height: 1000px;
 	min-width: 800px;
 	margin-left:200px ;
 	border-radius:10px;
 	background: #FFFFFF;
+	padding-bottom: 50px;
 }
 .user_book{
 	min-height: 350px;
@@ -88,8 +88,13 @@
 	color: #444242;
 	font-size: 17px;
 }
-.user_info{
+.box{
 	
+}
+.box hr{
+	border: 1px solid #C8C8C8;
+	border-radius:20px ;
+	margin-top: 0px;
 }
 .title_word{
 	background: #C8C8C8;
@@ -133,4 +138,41 @@
 	font-size: 13px;
 	width: 60%;
 	margin: auto;
+}
+.user_news{
+	height: 180px;
+	text-align: left;
+	margin-top: -6px;
+}
+.user_news img{
+	height: 50px;
+	width: 50px;
+	border-radius:50px;
+	float: left;
+	margin-left:40px ;
+	margin-top: 12px;
+}
+.user_news h1{
+	font-size: 20px;
+	color: #000000;
+	float: left;
+	margin-top:29px;
+	margin-left: 11px;
+}
+.user_news h2{
+	font-size: 18px;
+	color: #000000;
+	float: left;
+	margin-top: 71px;
+	margin-left: -253px;
+}
+.user_news p{
+	float: left;
+	margin: 14px 101px;
+	font-size: 15px;
+	background: #C8C8C8;
+	padding: 13px 182px 17px 7px;
+}
+.user_news:hover{
+	background: #636363;
 }
