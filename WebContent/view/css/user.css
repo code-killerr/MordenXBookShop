@@ -1,4 +1,136 @@
 .all{
+	width: 100%;
+	float: left;
 	background:#333;
 	min-height: 100%;
+	min-width: 1000px;
+	text-align: center;
+	font-family: "宋体";
+}
+.all h1{
+	color: #C8C8C8;
+	margin: 40px;
+	font-size: 40px;
+}
+.all hr{
+	color: #C8C8C8;
+	border:2px solid #C8C8C8;
+}
+.user_body{
+	background: #333;
+	width: 1000px;
+	height: 1000px;
+	min-width: 1000px;
+	margin: 50px auto;
+	border-radius:10px;\
+	border: 2px solid #C8C8C8;
+}
+.user_image{
+	float: left;
+	background: #333;
+	min-height: 250px;
+	min-width: 150px;
+	margin-top:28px ;
+}
+.user_image img{
+	height: 200px;
+	width: 130px;
+}
+.user_name{
+	min-height:80px;
+	min-width: 130px;
+	text-align: center;
+	padding-top: 20px;
+}
+.user_name a:hover{
+	color: #00C3FF;
+}
+.user_name p{
+	font-size: 20px;
+}
+
+.user_middle{
+	width: 800px;
+	height: 1000px;
+	min-width: 800px;
+	margin-left:200px ;
+	border-radius:10px;
+	background: #FFFFFF;
+}
+.user_book{
+	min-height: 350px;
+	width: 99%;
+	border: 2px solid #C8C8C8;
+	background: #333;
+	margin: 5px auto;
+}
+.user_book p{
+	font-size: 20px;
+	color: #333;
+	background: #C8C8C8;
+}
+.user_book hr{
+	border: 1px solid #C8C8C8;
+}
+.user_book img{
+	height: 250px;
+	width: 100%;
+	border: 1px solid #FFFFFF;
+	border-radius: 5px;
+}
+.user_book .book_info{
+	float: left;
+	width: 19%;
+	margin: 10px 20px;
+	background: #FFFFFF;
+}
+.book_info p{
+	color: #444242;
+	font-size: 17px;
+}
+.user_info{
+	
+}
+.title_word{
+	background: #C8C8C8;
+	font-size: 20px;
+	color: #333;
+}
+.information{
+	width: 70%;
+	max-width: 550px;
+	margin: 10px auto;
+	background: #C8C8C8;
+	padding-top: 3px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+}
+.information p{
+	background: none;
+	text-align: left;
+	margin-top: 20px;
+	color: #000000;
+	font-size: 15px;
+}
+.button{
+	margin: 10px;
+	background: #B11E30;
+	height: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	float: right;
+	margin-top: -20px;
+}
+.button:hover{
+	background: #C9142A;
+}
+.button a{
+	color: #FFFFFF;
+	font-size: 10px;
+}
+.introduct-word{
+	font-size: 13px;
+	width: 60%;
+	margin: auto;
 }
