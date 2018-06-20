@@ -1,0 +1,58 @@
+body{
+	text-align: center;
+	font-family: "宋体";
+}
+.head{ 
+		height:32px; 
+		line-height:32px; 
+		background:#e4e8ea; 
+		overflow:hidden;
+		border:2px solid #E4E8EA;
+	}
+.head1{
+	height:32px; 
+	line-height:32px; 
+	overflow:hidden;
+	border:2px solid #E4E8EA;
+}
+span{
+	color: #4b7b9c;
+    float: left;
+    display: block;
+}
+.sel{
+	height: 10px;
+	width: 80px;
+	float: left;
+}
+.name{
+	width: 100px;
+	text-align: left;
+}
+.sex{
+	width: 50px;
+	text-align: left;
+}
+.address{
+	width: 500px;
+	text-align: left;
+}
+.birth{
+	width: 200px;
+	text-align: left;
+}
+.mail{
+	width: 300px;
+	text-align: left;
+}
+.QQ{
+	width: 100px;
+	text-align: left;
+}
+.handle{
+	width: 50px;
+	text-align: left;
+}
+ul{
+	list-style: none;
+}
