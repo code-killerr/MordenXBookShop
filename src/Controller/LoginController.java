@@ -32,7 +32,6 @@ public class LoginController extends HttpServlet {
 			e.printStackTrace();
 		}
 		if(list.size()>0) {
-			System.out.println(list.get(0));
 			HttpSession session=req.getSession();
 			session.setAttribute("userInfo", list);
 			resp.sendRedirect("index.jsp");

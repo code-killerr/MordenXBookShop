@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 
@@ -12,6 +17,8 @@
 
 	<body>
 		<canvas id="canvas" style="position: fixed;"></canvas>
+			
+		<div class="Ranking_all">
 		
 			<script type="text/javascript" src="view/js/canves.js"></script>
 			<div class="header">
@@ -45,11 +52,22 @@
 				</div>
 				<!--导航栏结束-->
 				<div class="header_enter">
-					<a href="login.jsp"><span class="denter_span01">登录</span></a>
-					<a class="denter_span02" href="register.jsp">注册</a>
+					<c:choose>
+        	<c:when test="${fn:length(userInfo)==0}">
+        		<a href="login.jsp"><span class="denter_span01">登录</span></a>
+        		<a class="denter_span02" href="register.jsp">注册</a>
+        	</c:when>
+            <c:otherwise>
+            	<c:forEach items="${userInfo }" var="item">
+					<a class="denter_span01" href="userInfo.jsp?userName=${item.username}"><span >${item.username}</span></a>
+        			<a class="denter_span02" href="leave.jsp">注销</a>
+    			</c:forEach>
+            </c:otherwise>
+            </c:choose>
 				</div>
 			</div>
 			<!--header结束-->
+			
 			<div class="Ranking_body">
 				
 				<div class=Ranking_Left>
@@ -79,58 +97,46 @@
 						<div class="cl10"></div>
 						<div class="ph_list box mar_left10" style="height: 380px;">
 							<div class="title">
-								<span>百度小说月票榜</span></div>
+								<span>网络小说月票榜</span></div>
 							<div class="book_list">
 								<ul id="monthTicketRankList" style="padding-top: 10px;">
 									<li><span>11416</span><em class="list_icon top jrsj_plus li_sec" bookid="510426" order="1" title="加入书架">1</em>
-										<!-- a href="http://book.zongheng.com/category/6.html" class="book_style">架空</a -->
-										<a href="http://book.zongheng.com/book/510426.html" title="锦衣春秋" target="_blank">锦衣春秋</a>
+										<a href="GetBookInfoController?bookName=锦衣春秋" target="_blank">锦衣春秋</a>
 									</li>
 									<li><span>11179</span><em class="list_icon top jrsj_plus li_sec" bookid="747843" order="2" title="加入书架">2</em>
-										<!-- a href="http://book.zongheng.com/category/6.html" class="book_style">架空</a -->
-										<a href="http://book.zongheng.com/book/747843.html" title="楚臣" target="_blank">楚臣</a>
+										<a href="GetBookInfoController?bookName=锦衣春秋" target="_blank">锦衣春秋</a>
 									</li>
 									<li><span>9935</span><em class="list_icon top jrsj_plus" bookid="672340" order="3" title="加入书架">3</em>
-										<!-- a href="http://book.zongheng.com/category/3.html" class="book_style">仙侠</a -->
-										<a href="http://book.zongheng.com/book/672340.html" title="剑来" target="_blank">剑来</a>
+										<a href="GetBookInfoController?bookName=锦衣春秋" target="_blank">锦衣春秋</a>
 									</li>
 									<li><span>9492</span><em class="list_icon jrsj_plus li_sec" bookid="714691" order="4" title="加入书架">4</em>
-										<!-- a href="http://book.zongheng.com/category/9.html" class="book_style">都市</a -->
-										<a href="http://book.zongheng.com/book/714691.html" title="绝命毒尸" target="_blank">绝命毒尸</a>
+										<a href="GetBookInfoController?bookName=锦衣春秋" target="_blank">锦衣春秋</a>
 									</li>
 									<li><span>9088</span><em class="list_icon jrsj_plus li_sec" bookid="682920" order="5" title="加入书架">5</em>
-										<!-- a href="http://book.zongheng.com/category/1.html" class="book_style">玄幻</a -->
-										<a href="http://book.zongheng.com/book/682920.html" title="圣武星辰" target="_blank">圣武星辰</a>
+										<a href="GetBookInfoController?bookName=锦衣春秋" target="_blank">锦衣春秋</a>
 									</li>
 									<li><span>5346</span><em class="list_icon jrsj_plus li_sec" bookid="547156" order="6" title="加入书架">6</em>
-										<!-- a href="http://book.zongheng.com/category/1.html" class="book_style">玄幻</a -->
-										<a href="http://book.zongheng.com/book/547156.html" title="天骄战纪" target="_blank">天骄战纪</a>
+										<a href="GetBookInfoController?bookName=锦衣春秋" target="_blank">锦衣春秋</a>
 									</li>
 									<li><span>3069</span><em class="list_icon jrsj_plus li_sec" bookid="735577" order="7" title="加入书架">7</em>
-										<!-- a href="http://book.zongheng.com/category/1.html" class="book_style">玄幻</a -->
-										<a href="http://book.zongheng.com/book/735577.html" title="帝道独尊" target="_blank">帝道独尊</a>
+										<a href="GetBookInfoController?bookName=锦衣春秋" target="_blank">锦衣春秋</a>
 									</li>
 									<li><span>2850</span><em class="list_icon jrsj_plus li_sec" bookid="665301" order="8" title="加入书架">8</em>
-										<!-- a href="http://book.zongheng.com/category/9.html" class="book_style">都市</a -->
-										<a href="http://book.zongheng.com/book/665301.html" title="医等狂兵" target="_blank">医等狂兵</a>
+										<a href="GetBookInfoController?bookName=锦衣春秋" target="_blank">锦衣春秋</a>
 									</li>
 									<li><span>2587</span><em class="list_icon jrsj_plus" bookid="489242" order="9" title="加入书架">9</em>
-										<!-- a href="http://book.zongheng.com/category/1.html" class="book_style">玄幻</a -->
-										<a href="http://book.zongheng.com/book/489242.html" title="剑道通神" target="_blank">剑道通神</a>
+										<a href="GetBookInfoController?bookName=锦衣春秋" target="_blank">锦衣春秋</a>
 									</li>
 									<li class="last"><span>2574</span><em class="list_icon jrsj_plus" bookid="490372" order="10" title="加入书架">10</em>
-										<!-- a href="http://book.zongheng.com/category/9.html" class="book_style">都市</a -->
-										<a href="http://book.zongheng.com/book/490372.html" title="近身狂兵" target="_blank">近身狂兵</a>
+										<a href="GetBookInfoController?bookName=锦衣春秋" target="_blank">锦衣春秋</a>
 									</li>
 								</ul>
 								<div class="more">
-									<a href="http://book.zongheng.com/ranknow/male/r1/c0/q0/1.html" target="_blank">查看更多&gt;&gt;</a>
+									<a href="javaScript(0)">查看更多&gt;&gt;</a>
 								</div>
 							</div>
 						</div>
-						<!-- 女主笔点击榜 -->
-
-						<!-- 女主笔点击榜 -->
+						
 						<div class="box ph_list mar_left10 tabcontainer">
 							<div class="head">
 								<span class="date fr">
@@ -144,111 +150,90 @@
 								<ul>
 
 									<li><span>403</span><em class="list_icon top jrsj_plus" bookid="650478" order="1" title="加入书架">1</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">豪门</a -->
-										<a href="http://huayu.baidu.com/book/650478.html" target="_blank" title="首长老公，上车吗？">首长老公，上车吗？</a>
+										<a href="GetBookInfoController?bookName=重生傀儡很吃香" target="_blank">重生傀儡很吃香</a>
 									</li>
 
 									<li><span>291</span><em class="list_icon top jrsj_plus" bookid="721987" order="2" title="加入书架">2</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/33.html">悬疑</a -->
-										<a href="http://huayu.baidu.com/book/721987.html" target="_blank" title="重生傀儡很吃香">重生傀儡很吃香</a>
+										<a href="GetBookInfoController?bookName=重生傀儡很吃香" target="_blank">重生傀儡很吃香</a>
 									</li>
 
 									<li><span>228</span><em class="list_icon top jrsj_plus" bookid="594715" order="3" title="加入书架">3</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">架空</a -->
-										<a href="http://huayu.baidu.com/book/594715.html" target="_blank" title="重生之嫡女多谋">重生之嫡女多谋</a>
+										<a href="GetBookInfoController?bookName=重生傀儡很吃香" target="_blank">重生傀儡很吃香</a>
 									</li>
 
 									<li><span>156</span><em class="list_icon jrsj_plus" bookid="746137" order="4" title="加入书架">4</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">架空</a -->
-										<a href="http://huayu.baidu.com/book/746137.html" target="_blank" title="凰权贵胄">凰权贵胄</a>
+										<a href="GetBookInfoController?bookName=重生傀儡很吃香" target="_blank">重生傀儡很吃香</a>
 									</li>
 
 									<li><span>96</span><em class="list_icon jrsj_plus" bookid="740404" order="5" title="加入书架">5</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">职场</a -->
-										<a href="http://huayu.baidu.com/book/740404.html" target="_blank" title="【征文】有权保持沉默">【征文】有权保持沉默</a>
-									</li>
+										<a href="GetBookInfoController?bookName=重生傀儡很吃香" target="_blank">重生傀儡很吃香</a>
 
 									<li><span>75</span><em class="list_icon jrsj_plus" bookid="728956" order="6" title="加入书架">6</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">架空</a -->
-										<a href="http://huayu.baidu.com/book/728956.html" target="_blank" title="神女宠夫：师尊你要乖">神女宠夫：师尊你要乖</a>
+										<a href="GetBookInfoController?bookName=重生傀儡很吃香" target="_blank">重生傀儡很吃香</a>
 									</li>
 
 									<li><span>70</span><em class="list_icon jrsj_plus" bookid="689525" order="7" title="加入书架">7</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/33.html">玄幻</a -->
-										<a href="http://huayu.baidu.com/book/689525.html" target="_blank" title="银白的死神">银白的死神</a>
+										<a href="GetBookInfoController?bookName=重生傀儡很吃香" target="_blank">重生傀儡很吃香</a>
 									</li>
 
 									<li><span>64</span><em class="list_icon jrsj_plus" bookid="710001" order="8" title="加入书架">8</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">架空</a -->
-										<a href="http://huayu.baidu.com/book/710001.html" target="_blank" title="穿越三国：军医小娘子">穿越三国：军医小娘子</a>
+										<a href="GetBookInfoController?bookName=重生傀儡很吃香" target="_blank">重生傀儡很吃香</a>
 									</li>
 
 									<li><span>61</span><em class="list_icon jrsj_plus" bookid="745927" order="9" title="加入书架">9</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">重生</a -->
-										<a href="http://huayu.baidu.com/book/745927.html" target="_blank" title="蜜恋2V1：偏偏喜欢你">蜜恋2V1：偏偏喜欢你</a>
+										<a href="GetBookInfoController?bookName=重生傀儡很吃香" target="_blank">重生傀儡很吃香</a>
 									</li>
 
 									<li class="last"><span>57</span><em class="list_icon jrsj_plus" bookid="733488" order="10" title="加入书架">10</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">校园</a -->
-										<a href="http://huayu.baidu.com/book/733488.html" target="_blank" title="初恋考卷：易先生借个吻呗">初恋考卷：易先生借个…</a>
+										<a href="GetBookInfoController?bookName=重生傀儡很吃香" target="_blank">重生傀儡很吃香</a>
 									</li>
 
 								</ul>
 								<div class="more">
-									<a href="http://huayu.baidu.com/store/c0/c0/u1/p1/v0/ALL.html" target="_blank">查看更多&gt;&gt;</a>
+									<a href="" target="_blank">查看更多&gt;&gt;</a>
 								</div>
 							</div>
 							<div class="book_list tabpanel" tabid="2" style="display: none;">
 								<ul>
 
 									<li><span>7978</span><em class="list_icon top jrsj_plus li_sec" bookid="662838" order="1" title="加入书架">1</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/33.html">玄幻</a -->
-										<a href="http://huayu.baidu.com/book/662838.html" target="_blank" title="我的老公是尸王">我的老公是尸王</a>
+										<a href="GetBookInfoController?bookName=我的老公是尸王" target="_blank">我的老公是尸王</a>
 									</li>
 
 									<li><span>5911</span><em class="list_icon top jrsj_plus li_sec" bookid="454178" order="2" title="加入书架">2</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">豪门</a -->
-										<a href="http://huayu.baidu.com/book/454178.html" target="_blank" title="陆少的暖婚新妻">陆少的暖婚新妻</a>
+										<a href="GetBookInfoController?bookName=我的老公是尸王" target="_blank">我的老公是尸王</a>
 									</li>
 
 									<li><span>5308</span><em class="list_icon top jrsj_plus" bookid="378327" order="3" title="加入书架">3</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">校园</a -->
-										<a href="http://huayu.baidu.com/book/378327.html" target="_blank" title="惹爱成瘾">惹爱成瘾</a>
+										<a href="GetBookInfoController?bookName=我的老公是尸王" target="_blank">我的老公是尸王</a>
 									</li>
 
 									<li><span>3098</span><em class="list_icon jrsj_plus" bookid="222011" order="4" title="加入书架">4</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">架空</a -->
-										<a href="http://huayu.baidu.com/book/222011.html" target="_blank" title="桃花满庭院">桃花满庭院</a>
+										<a href="GetBookInfoController?bookName=我的老公是尸王" target="_blank">我的老公是尸王</a>
 									</li>
 
 									<li><span>1801</span><em class="list_icon jrsj_plus" bookid="439120" order="5" title="加入书架">5</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">穿越</a -->
-										<a href="http://huayu.baidu.com/book/439120.html" target="_blank" title="嫡女有毒">嫡女有毒</a>
+										<a href="GetBookInfoController?bookName=我的老公是尸王" target="_blank">我的老公是尸王</a>
 									</li>
 
 									<li><span>1737</span><em class="list_icon jrsj_plus" bookid="99426" order="6" title="加入书架">6</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">架空</a -->
-										<a href="http://huayu.baidu.com/book/99426.html" target="_blank" title="香蜜沉沉烬如霜">香蜜沉沉烬如霜</a>
+										<a href="GetBookInfoController?bookName=我的老公是尸王" target="_blank">我的老公是尸王</a>
 									</li>
 
 									<li><span>1670</span><em class="list_icon jrsj_plus" bookid="458829" order="7" title="加入书架">7</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">穿越</a -->
-										<a href="http://huayu.baidu.com/book/458829.html" target="_blank" title="相门腹黑女">相门腹黑女</a>
+										<a href="GetBookInfoController?bookName=我的老公是尸王" target="_blank">我的老公是尸王</a>
 									</li>
 
 									<li><span>1560</span><em class="list_icon jrsj_plus" bookid="318263" order="8" title="加入书架">8</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">婚恋</a -->
-										<a href="http://huayu.baidu.com/book/318263.html" target="_blank" title="盛世婚宠：老公送上门">盛世婚宠：老公送上门</a>
+										<a href="GetBookInfoController?bookName=我的老公是尸王" target="_blank">我的老公是尸王</a>
 									</li>
 
 									<li><span>1452</span><em class="list_icon jrsj_plus" bookid="423793" order="9" title="加入书架">9</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">豪门</a -->
-										<a href="http://huayu.baidu.com/book/423793.html" target="_blank" title="重生千金归来">重生千金归来</a>
+										<a href="GetBookInfoController?bookName=我的老公是尸王" target="_blank">我的老公是尸王</a>
 									</li>
 
 									<li class="last"><span>1417</span><em class="list_icon jrsj_plus" bookid="476962" order="10" title="加入书架">10</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">穿越</a -->
-										<a href="http://huayu.baidu.com/book/476962.html" target="_blank" title="绝色毒医王妃">绝色毒医王妃</a>
+										<a href="GetBookInfoController?bookName=我的老公是尸王" target="_blank">我的老公是尸王</a>
 									</li>
 
 								</ul>
@@ -260,54 +245,43 @@
 								<ul>
 
 									<li><span>137351</span><em class="list_icon top jrsj_plus li_sec" bookid="662838" order="1" title="加入书架">1</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/33.html">玄幻</a -->
-										<a href="http://huayu.baidu.com/book/662838.html" target="_blank" title="我的老公是尸王">我的老公是尸王</a>
+										<a href="GetBookInfoController?bookName=惹爱成瘾" target="_blank">惹爱成瘾</a>
 									</li>
 
 									<li><span>98630</span><em class="list_icon top jrsj_plus li_sec" bookid="378327" order="2" title="加入书架">2</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">校园</a -->
-										<a href="http://huayu.baidu.com/book/378327.html" target="_blank" title="惹爱成瘾">惹爱成瘾</a>
+										<a href="GetBookInfoController?bookName=惹爱成瘾" target="_blank">惹爱成瘾</a>
 									</li>
 
 									<li><span>87277</span><em class="list_icon top jrsj_plus" bookid="454178" order="3" title="加入书架">3</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">豪门</a -->
-										<a href="http://huayu.baidu.com/book/454178.html" target="_blank" title="陆少的暖婚新妻">陆少的暖婚新妻</a>
+										<a href="GetBookInfoController?bookName=惹爱成瘾" target="_blank">惹爱成瘾</a>
 									</li>
 
 									<li><span>46768</span><em class="list_icon jrsj_plus" bookid="222011" order="4" title="加入书架">4</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">架空</a -->
-										<a href="http://huayu.baidu.com/book/222011.html" target="_blank" title="桃花满庭院">桃花满庭院</a>
+										<a href="GetBookInfoController?bookName=惹爱成瘾" target="_blank">惹爱成瘾</a>
 									</li>
 
 									<li><span>43995</span><em class="list_icon jrsj_plus" bookid="608830" order="5" title="加入书架">5</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">豪门</a -->
-										<a href="http://huayu.baidu.com/book/608830.html" target="_blank" title="奉子闪婚：鲜妻不准逃">奉子闪婚：鲜妻不准逃</a>
+										<a href="GetBookInfoController?bookName=惹爱成瘾" target="_blank">惹爱成瘾</a>
 									</li>
 
 									<li><span>41831</span><em class="list_icon jrsj_plus" bookid="423793" order="6" title="加入书架">6</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">豪门</a -->
-										<a href="http://huayu.baidu.com/book/423793.html" target="_blank" title="重生千金归来">重生千金归来</a>
-									</li>
+										
+										<a href="GetBookInfoController?bookName=惹爱成瘾" target="_blank">惹爱成瘾</a>
 
 									<li><span>40108</span><em class="list_icon jrsj_plus" bookid="99426" order="7" title="加入书架">7</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">架空</a -->
-										<a href="http://huayu.baidu.com/book/99426.html" target="_blank" title="香蜜沉沉烬如霜">香蜜沉沉烬如霜</a>
-									</li>
+
+									<a href="GetBookInfoController?bookName=惹爱成瘾" target="_blank">惹爱成瘾</a>
 
 									<li><span>30624</span><em class="list_icon jrsj_plus" bookid="446948" order="8" title="加入书架">8</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/31.html">豪门</a -->
-										<a href="http://huayu.baidu.com/book/446948.html" target="_blank" title="军门第一闪婚">军门第一闪婚</a>
-									</li>
-
+										
+										<a href="GetBookInfoController?bookName=惹爱成瘾" target="_blank">惹爱成瘾</a>
 									<li><span>30607</span><em class="list_icon jrsj_plus" bookid="439120" order="9" title="加入书架">9</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">穿越</a -->
-										<a href="http://huayu.baidu.com/book/439120.html" target="_blank" title="嫡女有毒">嫡女有毒</a>
-									</li>
+										
+										<a href="GetBookInfoController?bookName=惹爱成瘾" target="_blank">惹爱成瘾</a>
 
 									<li class="last"><span>30055</span><em class="list_icon jrsj_plus" bookid="476962" order="10" title="加入书架">10</em>
-										<!-- a class="book_style" href="http://book.zongheng.com/category/32.html">穿越</a -->
-										<a href="http://huayu.baidu.com/book/476962.html" target="_blank" title="绝色毒医王妃">绝色毒医王妃</a>
-									</li>
+										
+									<a href="GetBookInfoController?bookName=惹爱成瘾" target="_blank">惹爱成瘾</a>
 
 								</ul>
 								<div class="more">
@@ -331,57 +305,56 @@
 								<ul>
 
 									<li>
-
 										<span>1040021</span><em class="list_icon top">1</em>
-										<a href="http://home.zongheng.com/show/userInfo/23312144.html" target="_blank">咸鱼夏至</a>
+										<a href="GetBookInfoController?bookName=咸鱼夏至" target="_blank">咸鱼夏至</a>
 									</li>
 
 									<li>
 
 										<span>400009</span><em class="list_icon top">2</em>
-										<a href="http://home.zongheng.com/show/userInfo/12896985.html" target="_blank">再跌真跳楼了</a>
+										<a  href="GetBookInfoController?bookName=咸鱼夏至" target="_blank">咸鱼夏至</a>
 									</li>
 
 									<li>
 
 										<span>210009</span><em class="list_icon top">3</em>
-										<a href="http://home.zongheng.com/show/userInfo/2537638.html" target="_blank">关中老人</a>
+										<a  href="GetBookInfoController?bookName=咸鱼夏至" target="_blank">咸鱼夏至</a>
 									</li>
 
 									<li>
 
 										<span>200200</span><em class="list_icon">4</em>
-										<a href="http://home.zongheng.com/show/userInfo/12915658.html" target="_blank">书友20272027</a>
+										<a href="GetBookInfoController?bookName=咸鱼夏至" target="_blank">咸鱼夏至</a>
 									</li>
 
 									<li>
 
 										<span>200027</span><em class="list_icon">5</em>
-										<a href="http://home.zongheng.com/show/userInfo/3697424.html" target="_blank">乱世狂刀</a>
+										<a href="GetBookInfoController?bookName=咸鱼夏至" target="_blank">咸鱼夏至</a>
 									</li>
 
 									<li>
 
 										<span>200021</span><em class="list_icon">6</em>
-										<a href="http://home.zongheng.com/show/userInfo/166130.html" target="_blank">烽火戏诸侯</a>
+										<a href="GetBookInfoController?bookName=咸鱼夏至" target="_blank">咸鱼夏至</a>
 									</li>
 
 									<li>
 
 										<span>200000</span><em class="list_icon">7</em>
-										<a href="http://home.zongheng.com/show/userInfo/13603781.html" target="_blank">寒起秋荻</a>
+										<a href="GetBookInfoController?bookName=咸鱼夏至" target="_blank">咸鱼夏至</a>
 									</li>
 
 									<li>
 
 										<span>200000</span><em class="list_icon">8</em>
-										<a href="http://home.zongheng.com/show/userInfo/1266487.html" target="_blank">花豹与狒狒</a>
+										<a href="GetBookInfoController?bookName=咸鱼夏至" target="_blank">咸鱼夏至</a>
 									</li>
 
 									<li>
 
 										<span>200000</span><em class="list_icon">9</em>
-										<a href="http://home.zongheng.com/show/userInfo/302729.html" target="_blank">边荒醉客</a>
+										<a href="GetBookInfoController?bookName=咸鱼夏至" target="_blank">咸鱼夏至</a>
 									</li>
 
 									<li class="last">
@@ -401,25 +374,25 @@
 									<li>
 
 										<span>1040075</span><em class="list_icon top">1</em>
-										<a href="http://home.zongheng.com/show/userInfo/23312144.html" target="_blank">咸鱼夏至</a>
+										<a href="GetBookInfoController?bookName=镇北王" target="_blank">镇北王</a>
 									</li>
 
 									<li>
 
 										<span>481000</span><em class="list_icon top">2</em>
-										<a href="http://home.zongheng.com/show/userInfo/17472892.html" target="_blank">镇北王</a>
+										<a href="GetBookInfoController?bookName=镇北王" target="_blank">镇北王</a>
 									</li>
 
 									<li>
 
 										<span>400045</span><em class="list_icon top">3</em>
-										<a href="http://home.zongheng.com/show/userInfo/12896985.html" target="_blank">再跌真跳楼了</a>
+										<a href="GetBookInfoController?bookName=镇北王" target="_blank">镇北王</a>
 									</li>
 
 									<li>
 
 										<span>374009</span><em class="list_icon">4</em>
-										<a href="http://home.zongheng.com/show/userInfo/49286038.html" target="_blank">怜风惜月</a>
+										<a href="GetBookInfoController?bookName=镇北王" target="_blank">镇北王</a>
 									</li>
 
 									<li>
@@ -431,19 +404,19 @@
 									<li>
 
 										<span>240000</span><em class="list_icon">6</em>
-										<a href="http://home.zongheng.com/show/userInfo/49287189.html" target="_blank">剑道V5</a>
+										<a href="GetBookInfoController?bookName=镇北王" target="_blank">镇北王</a>
 									</li>
 
 									<li>
 
 										<span>210024</span><em class="list_icon">7</em>
-										<a href="http://home.zongheng.com/show/userInfo/2537638.html" target="_blank">关中老人</a>
+										<a href="GetBookInfoController?bookName=镇北王" target="_blank">镇北王</a>
 									</li>
 
 									<li>
 
 										<span>210015</span><em class="list_icon">8</em>
-										<a href="http://home.zongheng.com/show/userInfo/4550038.html" target="_blank">醉别关</a>
+										<a href="GetBookInfoController?bookName=镇北王" target="_blank">镇北王</a>
 									</li>
 
 									<li>
@@ -455,7 +428,7 @@
 									<li class="last">
 
 										<span>200400</span><em class="list_icon">10</em>
-										<a href="http://home.zongheng.com/show/userInfo/12915658.html" target="_blank">书友20272027</a>
+										<a href="GetBookInfoController?bookName=镇北王" target="_blank">镇北王</a>
 									</li>
 
 								</ul>
@@ -469,73 +442,73 @@
 									<li>
 
 										<span>3656266</span><em class="list_icon top">1</em>
-										<a href="http://home.zongheng.com/show/userInfo/23312144.html" target="_blank">咸鱼夏至</a>
+										<a href="GetBookInfoController?bookName=狂徒911" target="_blank">狂徒911</a>
 									</li>
 
 									<li>
 
 										<span>2000108</span><em class="list_icon top">2</em>
-										<a href="http://home.zongheng.com/show/userInfo/1973472.html" target="_blank">狂徒911</a>
+										<a href="GetBookInfoController?bookName=狂徒911" target="_blank">狂徒911</a>
 									</li>
 
 									<li>
 
 										<span>2000000</span><em class="list_icon top">3</em>
-										<a href="http://home.zongheng.com/show/userInfo/49185805.html" target="_blank">绝地欧皇</a>
+										<a href="GetBookInfoController?bookName=狂徒911" target="_blank">狂徒911</a>
 									</li>
 
 									<li>
 
 										<span>2000000</span><em class="list_icon">4</em>
-										<a href="http://home.zongheng.com/show/userInfo/8621911.html" target="_blank">小脸好白</a>
+										<a href="GetBookInfoController?bookName=狂徒911" target="_blank">狂徒911</a>
 									</li>
 
 									<li>
 
 										<span>2000000</span><em class="list_icon">5</em>
-										<a href="http://home.zongheng.com/show/userInfo/8663447.html" target="_blank">骑兵168</a>
+										<a href="GetBookInfoController?bookName=狂徒911" target="_blank">狂徒911</a>
 									</li>
 
 									<li>
 
 										<span>2000000</span><em class="list_icon">6</em>
-										<a href="http://home.zongheng.com/show/userInfo/8663519.html" target="_blank">心向明月22</a>
+										<a href="GetBookInfoController?bookName=狂徒911" target="_blank">狂徒911</a>
 									</li>
 
 									<li>
 
 										<span>2000000</span><em class="list_icon">7</em>
-										<a href="http://home.zongheng.com/show/userInfo/9621938.html" target="_blank">井中冷月</a>
+										<a href="GetBookInfoController?bookName=狂徒911" target="_blank">狂徒911</a>
 									</li>
 
 									<li>
 
 										<span>2000000</span><em class="list_icon">8</em>
-										<a href="http://home.zongheng.com/show/userInfo/8663490.html" target="_blank">猫vs老鼠</a>
+										<a href="GetBookInfoController?bookName=狂徒911" target="_blank">狂徒911</a>
 									</li>
 
 									<li>
 
 										<span>2000000</span><em class="list_icon">9</em>
-										<a href="http://home.zongheng.com/show/userInfo/8663711.html" target="_blank">影之女王</a>
+									<a href="GetBookInfoController?bookName=狂徒911" target="_blank">狂徒911</a>
 									</li>
 
 									<li class="last">
 
 										<span>1401000</span><em class="list_icon">10</em>
-										<a href="http://home.zongheng.com/show/userInfo/49023076.html" target="_blank">v小姐</a>
+										<a href="GetBookInfoController?bookName=狂徒911" target="_blank">狂徒911</a>
 									</li>
 
 								</ul>
 								<div class="more">
-									<a href="http://book.zongheng.com/rank/user/r22/c0/q0/1.html" target="_blank">查看更多&gt;&gt;</a>
+									<a href="Javascript:void(0)" target="">查看更多&gt;&gt;</a>
 								</div>
 							</div>
 						</div>
 						<!-- 读者消费榜 结束 -->
 						<div class="cl15"></div>
 						<div class="box zh_tit" style="width: 755px;">
-							<h2 class="bd_title"><em></em>男频分类排行榜</h2>
+							<h2 class="bd_title"><em></em>分类小说排行榜</h2>
 						</div>
 						<div class="cl10"></div>
 						<div class="box ph_list mar_left10 tabcontainer">
@@ -554,43 +527,43 @@
 								<ul>
 
 									<li><span>170958</span><em class="list_icon top jrsj_plus" bookid="555035" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/555035.html" target="_blank" title="大逆之门">大逆之门</a>
+										<a href="GetBookInfoController?bookName=元尊" target="_blank">元尊</a>
 									</li>
 
 									<li><span>163832</span><em class="list_icon top jrsj_plus" bookid="682920" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/682920.html" target="_blank" title="圣武星辰">圣武星辰</a>
+										<a href="GetBookInfoController?bookName=元尊" target="_blank">元尊</a>
 									</li>
 
 									<li><span>146872</span><em class="list_icon top jrsj_plus" bookid="739185" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/739185.html" target="_blank" title="幻神">幻神</a>
+										<a href="GetBookInfoController?bookName=元尊" target="_blank">元尊</a>
 									</li>
 
 									<li><span>120324</span><em class="list_icon jrsj_plus" bookid="309318" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/309318.html" target="_blank" title="祭炼山河">祭炼山河</a>
+										<a href="GetBookInfoController?bookName=元尊" target="_blank">元尊</a>
 									</li>
 
 									<li><span>86700</span><em class="list_icon jrsj_plus" bookid="481225" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/481225.html" target="_blank" title="大魔仙">大魔仙</a>
+										<a href="GetBookInfoController?bookName=元尊" target="_blank">元尊</a>
 									</li>
 
 									<li><span>16623</span><em class="list_icon jrsj_plus" bookid="671552" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/671552.html" target="_blank" title="龙陨九天">龙陨九天</a>
+										<a href="GetBookInfoController?bookName=元尊" target="_blank">元尊</a>
 									</li>
 
 									<li><span>15642</span><em class="list_icon jrsj_plus" bookid="685640" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/685640.html" target="_blank" title="元尊">元尊</a>
+										<a href="GetBookInfoController?bookName=元尊" target="_blank">元尊</a>
 									</li>
 
 									<li><span>10602</span><em class="list_icon jrsj_plus" bookid="288345" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/288345.html" target="_blank" title="无上圣天">无上圣天</a>
+										<a href="GetBookInfoController?bookName=元尊" target="_blank">元尊</a>
 									</li>
 
 									<li><span>7525</span><em class="list_icon jrsj_plus" bookid="734818" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/734818.html" target="_blank" title="狂暴逆袭">狂暴逆袭</a>
+										<a href="GetBookInfoController?bookName=元尊" target="_blank">元尊</a>
 									</li>
 
 									<li class="last"><span>4780</span><em class="list_icon jrsj_plus" bookid="711996" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/711996.html" target="_blank" title="万界仙王">万界仙王</a>
+										<a href="GetBookInfoController?bookName=元尊" target="_blank">元尊</a>
 									</li>
 
 								</ul>
@@ -602,43 +575,43 @@
 								<ul>
 
 									<li><span>701612</span><em class="list_icon top jrsj_plus" bookid="682920" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/682920.html" target="_blank" title="圣武星辰">圣武星辰</a>
+										<a href="GetBookInfoController?bookName=圣武星辰" target="_blank">圣武星辰</a>
 									</li>
 
 									<li><span>677955</span><em class="list_icon top jrsj_plus" bookid="555035" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/555035.html" target="_blank" title="大逆之门">大逆之门</a>
+										<a href="GetBookInfoController?bookName=圣武星辰" target="_blank">圣武星辰</a>
 									</li>
 
 									<li><span>534311</span><em class="list_icon top jrsj_plus" bookid="685640" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/685640.html" target="_blank" title="元尊">元尊</a>
+										<a href="GetBookInfoController?bookName=圣武星辰" target="_blank">圣武星辰</a>
 									</li>
 
 									<li><span>322598</span><em class="list_icon jrsj_plus" bookid="739185" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/739185.html" target="_blank" title="幻神">幻神</a>
+										<a href="GetBookInfoController?bookName=圣武星辰" target="_blank">圣武星辰</a>
 									</li>
 
 									<li><span>259577</span><em class="list_icon jrsj_plus" bookid="309318" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/309318.html" target="_blank" title="祭炼山河">祭炼山河</a>
+										<a href="GetBookInfoController?bookName=圣武星辰" target="_blank">圣武星辰</a>
 									</li>
 
 									<li><span>185490</span><em class="list_icon jrsj_plus" bookid="481225" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/481225.html" target="_blank" title="大魔仙">大魔仙</a>
+										<a href="GetBookInfoController?bookName=圣武星辰" target="_blank">圣武星辰</a>
 									</li>
 
 									<li><span>146952</span><em class="list_icon jrsj_plus" bookid="671552" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/671552.html" target="_blank" title="龙陨九天">龙陨九天</a>
+										<a href="GetBookInfoController?bookName=圣武星辰" target="_blank">圣武星辰</a>
 									</li>
 
 									<li><span>100667</span><em class="list_icon jrsj_plus" bookid="435710" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/435710.html" target="_blank" title="无敌剑域">无敌剑域</a>
+										<a href="GetBookInfoController?bookName=圣武星辰" target="_blank">圣武星辰</a>
 									</li>
 
 									<li><span>82092</span><em class="list_icon jrsj_plus" bookid="408586" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/408586.html" target="_blank" title="逆天邪神">逆天邪神</a>
+										<a href="GetBookInfoController?bookName=圣武星辰" target="_blank">圣武星辰</a>
 									</li>
 
 									<li class="last"><span>32098</span><em class="list_icon jrsj_plus" bookid="342974" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/342974.html" target="_blank" title="永夜君王">永夜君王</a>
+										<a href="GetBookInfoController?bookName=圣武星辰" target="_blank">圣武星辰</a>
 									</li>
 
 								</ul>
@@ -650,43 +623,43 @@
 								<ul>
 
 									<li><span>10247422</span><em class="list_icon top jrsj_plus" bookid="682920" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/682920.html" target="_blank" title="圣武星辰">圣武星辰</a>
+										<a href="GetBookInfoController?bookName=大逆之门" target="_blank">大逆之门</a>
 									</li>
 
 									<li><span>9718820</span><em class="list_icon top jrsj_plus" bookid="555035" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/555035.html" target="_blank" title="大逆之门">大逆之门</a>
+										<a href="GetBookInfoController?bookName=大逆之门" target="_blank">大逆之门</a>
 									</li>
 
 									<li><span>8230721</span><em class="list_icon top jrsj_plus" bookid="685640" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/685640.html" target="_blank" title="元尊">元尊</a>
+										<a href="GetBookInfoController?bookName=大逆之门" target="_blank">大逆之门</a>
 									</li>
 
 									<li><span>7682750</span><em class="list_icon jrsj_plus" bookid="309318" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/309318.html" target="_blank" title="祭炼山河">祭炼山河</a>
+										<a href="GetBookInfoController?bookName=大逆之门" target="_blank">大逆之门</a>
 									</li>
 
 									<li><span>1983373</span><em class="list_icon jrsj_plus" bookid="481225" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/481225.html" target="_blank" title="大魔仙">大魔仙</a>
+										<a href="GetBookInfoController?bookName=大逆之门" target="_blank">大逆之门</a>
 									</li>
 
 									<li><span>1829247</span><em class="list_icon jrsj_plus" bookid="408586" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/408586.html" target="_blank" title="逆天邪神">逆天邪神</a>
+										<a href="GetBookInfoController?bookName=大逆之门" target="_blank">大逆之门</a>
 									</li>
 
 									<li><span>1722494</span><em class="list_icon jrsj_plus" bookid="435710" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/435710.html" target="_blank" title="无敌剑域">无敌剑域</a>
+										<a href="GetBookInfoController?bookName=大逆之门" target="_blank">大逆之门</a>
 									</li>
 
 									<li><span>1370650</span><em class="list_icon jrsj_plus" bookid="739185" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/739185.html" target="_blank" title="幻神">幻神</a>
+										<a href="GetBookInfoController?bookName=大逆之门" target="_blank">大逆之门</a>
 									</li>
 
 									<li><span>730282</span><em class="list_icon jrsj_plus" bookid="671552" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/671552.html" target="_blank" title="龙陨九天">龙陨九天</a>
+										<a href="GetBookInfoController?bookName=大逆之门" target="_blank">大逆之门</a>
 									</li>
 
 									<li class="last"><span>618385</span><em class="list_icon jrsj_plus" bookid="342974" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/342974.html" target="_blank" title="永夜君王">永夜君王</a>
+										<a href="GetBookInfoController?bookName=大逆之门" target="_blank">大逆之门</a>
 									</li>
 
 								</ul>
@@ -713,43 +686,43 @@
 								<ul>
 
 									<li><span>24342</span><em class="list_icon top jrsj_plus" bookid="708632" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/708632.html" target="_blank" title="万空道仙">万空道仙</a>
+										<a href="GetBookInfoController?bookName=阴阳至道" target="_blank">阴阳至道</a>
 									</li>
 
 									<li><span>6052</span><em class="list_icon top jrsj_plus" bookid="688697" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/688697.html" target="_blank" title="平天策">平天策</a>
+										<a href="GetBookInfoController?bookName=阴阳至道" target="_blank">阴阳至道</a>
 									</li>
 
 									<li><span>2957</span><em class="list_icon top jrsj_plus" bookid="746727" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/746727.html" target="_blank" title="阴阳至道">阴阳至道</a>
+										<a href="GetBookInfoController?bookName=阴阳至道" target="_blank">阴阳至道</a>
 									</li>
 
 									<li><span>2804</span><em class="list_icon jrsj_plus" bookid="688118" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/688118.html" target="_blank" title="少侠饶命">少侠饶命</a>
+										<a href="GetBookInfoController?bookName=阴阳至道" target="_blank">阴阳至道</a>
 									</li>
 
 									<li><span>631</span><em class="list_icon jrsj_plus" bookid="737455" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/737455.html" target="_blank" title="仙途末路">仙途末路</a>
+										<a href="GetBookInfoController?bookName=阴阳至道" target="_blank">阴阳至道</a>
 									</li>
 
 									<li><span>562</span><em class="list_icon jrsj_plus" bookid="672340" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/672340.html" target="_blank" title="剑来">剑来</a>
+										<a href="GetBookInfoController?bookName=阴阳至道" target="_blank">阴阳至道</a>
 									</li>
 
 									<li><span>269</span><em class="list_icon jrsj_plus" bookid="734300" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/734300.html" target="_blank" title="完美风暴">完美风暴</a>
+										<a href="GetBookInfoController?bookName=阴阳至道" target="_blank">阴阳至道</a>
 									</li>
 
 									<li><span>127</span><em class="list_icon jrsj_plus" bookid="663637" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/663637.html" target="_blank" title="证道天途">证道天途</a>
+										<a href="GetBookInfoController?bookName=阴阳至道" target="_blank">阴阳至道</a>
 									</li>
 
 									<li><span>107</span><em class="list_icon jrsj_plus" bookid="736682" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/736682.html" target="_blank" title="茧中仙">茧中仙</a>
+										<a href="GetBookInfoController?bookName=阴阳至道" target="_blank">阴阳至道</a>
 									</li>
 
 									<li class="last"><span>47</span><em class="list_icon jrsj_plus" bookid="352542" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/352542.html" target="_blank" title="偷香高手">偷香高手</a>
+										<a href="GetBookInfoController?bookName=阴阳至道" target="_blank">阴阳至道</a>
 									</li>
 
 								</ul>
@@ -761,43 +734,43 @@
 								<ul>
 
 									<li><span>214585</span><em class="list_icon top jrsj_plus" bookid="672340" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/672340.html" target="_blank" title="剑来">剑来</a>
+										<a href="GetBookInfoController?bookName=万空道仙" target="_blank">万空道仙</a>
 									</li>
 
 									<li><span>126522</span><em class="list_icon top jrsj_plus" bookid="708632" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/708632.html" target="_blank" title="万空道仙">万空道仙</a>
+										<a href="GetBookInfoController?bookName=万空道仙" target="_blank">万空道仙</a>
 									</li>
 
 									<li><span>65293</span><em class="list_icon top jrsj_plus" bookid="688697" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/688697.html" target="_blank" title="平天策">平天策</a>
+										<a href="GetBookInfoController?bookName=万空道仙" target="_blank">万空道仙</a>
 									</li>
 
 									<li><span>17453</span><em class="list_icon jrsj_plus" bookid="352542" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/352542.html" target="_blank" title="偷香高手">偷香高手</a>
+										<a href="GetBookInfoController?bookName=万空道仙" target="_blank">万空道仙</a>
 									</li>
 
 									<li><span>14825</span><em class="list_icon jrsj_plus" bookid="377897" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/377897.html" target="_blank" title="仙路至尊">仙路至尊</a>
+										<a href="GetBookInfoController?bookName=万空道仙" target="_blank">万空道仙</a>
 									</li>
 
 									<li><span>5767</span><em class="list_icon jrsj_plus" bookid="688118" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/688118.html" target="_blank" title="少侠饶命">少侠饶命</a>
+										<a href="GetBookInfoController?bookName=万空道仙" target="_blank">万空道仙</a>
 									</li>
 
 									<li><span>5054</span><em class="list_icon jrsj_plus" bookid="746727" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/746727.html" target="_blank" title="阴阳至道">阴阳至道</a>
+										<a href="GetBookInfoController?bookName=万空道仙" target="_blank">万空道仙</a>
 									</li>
 
 									<li><span>2566</span><em class="list_icon jrsj_plus" bookid="744979" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/744979.html" target="_blank" title="啼笑仙缘">啼笑仙缘</a>
+										<a href="GetBookInfoController?bookName=万空道仙" target="_blank">万空道仙</a>
 									</li>
 
 									<li><span>1976</span><em class="list_icon jrsj_plus" bookid="117529" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/117529.html" target="_blank" title="仙都">仙都</a>
+										<a href="GetBookInfoController?bookName=万空道仙" target="_blank">万空道仙</a>
 									</li>
 
 									<li class="last"><span>1720</span><em class="list_icon jrsj_plus" bookid="95252" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/95252.html" target="_blank" title="桃花">桃花</a>
+										<a href="GetBookInfoController?bookName=万空道仙" target="_blank">万空道仙</a>
 									</li>
 
 								</ul>
@@ -809,43 +782,43 @@
 								<ul>
 
 									<li><span>2851643</span><em class="list_icon top jrsj_plus" bookid="672340" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/672340.html" target="_blank" title="剑来">剑来</a>
+										<a href="GetBookInfoController?bookName=偷香高手" target="_blank">偷香高手</a>
 									</li>
 
 									<li><span>1567402</span><em class="list_icon top jrsj_plus" bookid="708632" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/708632.html" target="_blank" title="万空道仙">万空道仙</a>
+										<a href="GetBookInfoController?bookName=偷香高手" target="_blank">偷香高手</a>
 									</li>
 
 									<li><span>860834</span><em class="list_icon top jrsj_plus" bookid="688697" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/688697.html" target="_blank" title="平天策">平天策</a>
+										<a href="GetBookInfoController?bookName=偷香高手" target="_blank">偷香高手</a>
 									</li>
 
 									<li><span>289446</span><em class="list_icon jrsj_plus" bookid="352542" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/352542.html" target="_blank" title="偷香高手">偷香高手</a>
+										<a href="GetBookInfoController?bookName=偷香高手" target="_blank">偷香高手</a>
 									</li>
 
 									<li><span>237285</span><em class="list_icon jrsj_plus" bookid="377897" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/377897.html" target="_blank" title="仙路至尊">仙路至尊</a>
+										<a href="GetBookInfoController?bookName=偷香高手" target="_blank">偷香高手</a>
 									</li>
 
 									<li><span>37384</span><em class="list_icon jrsj_plus" bookid="95252" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/95252.html" target="_blank" title="桃花">桃花</a>
+										<a href="GetBookInfoController?bookName=偷香高手" target="_blank">偷香高手</a>
 									</li>
 
 									<li><span>33230</span><em class="list_icon jrsj_plus" bookid="117529" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/117529.html" target="_blank" title="仙都">仙都</a>
+										<a href="GetBookInfoController?bookName=偷香高手" target="_blank">偷香高手</a>
 									</li>
 
 									<li><span>29034</span><em class="list_icon jrsj_plus" bookid="401153" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/401153.html" target="_blank" title="剑王朝">剑王朝</a>
+										<a href="GetBookInfoController?bookName=偷香高手" target="_blank">偷香高手</a>
 									</li>
 
 									<li><span>28200</span><em class="list_icon jrsj_plus" bookid="45669" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/45669.html" target="_blank" title="修真世界">修真世界</a>
+										<a href="GetBookInfoController?bookName=偷香高手" target="_blank">偷香高手</a>
 									</li>
 
 									<li class="last"><span>27119</span><em class="list_icon jrsj_plus" bookid="610743" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/610743.html" target="_blank" title="浮沧录">浮沧录</a>
+										<a href="GetBookInfoController?bookName=偷香高手" target="_blank">偷香高手</a>
 									</li>
 
 								</ul>
@@ -871,43 +844,43 @@
 								<ul>
 
 									<li><span>128523</span><em class="list_icon top jrsj_plus" bookid="510426" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/510426.html" target="_blank" title="锦衣春秋">锦衣春秋</a>
+										<a href="GetBookInfoController?bookName=乱世枭雄" target="_blank">乱世枭雄</a>
 									</li>
 
 									<li><span>17417</span><em class="list_icon top jrsj_plus" bookid="737385" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/737385.html" target="_blank" title="乱世枭雄">乱世枭雄</a>
+										<a href="GetBookInfoController?bookName=乱世枭雄" target="_blank">乱世枭雄</a>
 									</li>
 
 									<li><span>6292</span><em class="list_icon top jrsj_plus" bookid="742723" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/742723.html" target="_blank" title="宋疆">宋疆</a>
+										<a href="GetBookInfoController?bookName=乱世枭雄" target="_blank">乱世枭雄</a>
 									</li>
 
 									<li><span>3648</span><em class="list_icon jrsj_plus" bookid="691985" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/691985.html" target="_blank" title="朝天阙">朝天阙</a>
+										<a href="GetBookInfoController?bookName=乱世枭雄" target="_blank">乱世枭雄</a>
 									</li>
 
 									<li><span>567</span><em class="list_icon jrsj_plus" bookid="747843" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/747843.html" target="_blank" title="楚臣">楚臣</a>
+										<a href="GetBookInfoController?bookName=乱世枭雄" target="_blank">乱世枭雄</a>
 									</li>
 
 									<li><span>119</span><em class="list_icon jrsj_plus" bookid="683061" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/683061.html" target="_blank" title="大明春色">大明春色</a>
+										<a href="GetBookInfoController?bookName=乱世枭雄" target="_blank">乱世枭雄</a>
 									</li>
 
 									<li><span>76</span><em class="list_icon jrsj_plus" bookid="490607" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/490607.html" target="_blank" title="大明1617">大明1617</a>
+										<a href="GetBookInfoController?bookName=乱世枭雄" target="_blank">乱世枭雄</a>
 									</li>
 
 									<li><span>43</span><em class="list_icon jrsj_plus" bookid="69507" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/69507.html" target="_blank" title="宰执天下">宰执天下</a>
+										<a href="GetBookInfoController?bookName=乱世枭雄" target="_blank">乱世枭雄</a>
 									</li>
 
 									<li><span>36</span><em class="list_icon jrsj_plus" bookid="710169" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/710169.html" target="_blank" title="盛世大明">盛世大明</a>
+										<a href="GetBookInfoController?bookName=乱世枭雄" target="_blank">乱世枭雄</a>
 									</li>
 
 									<li class="last"><span>32</span><em class="list_icon jrsj_plus" bookid="696986" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/696986.html" target="_blank" title="大周王侯">大周王侯</a>
+										<<a href="GetBookInfoController?bookName=乱世枭雄" target="_blank">乱世枭雄</a>
 									</li>
 
 								</ul>
@@ -919,43 +892,43 @@
 								<ul>
 
 									<li><span>281111</span><em class="list_icon top jrsj_plus li_sec" bookid="510426" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/510426.html" target="_blank" title="锦衣春秋">锦衣春秋</a>
+										<a href="GetBookInfoController?bookName=朝天阙" target="_blank">朝天阙</a>
 									</li>
 
 									<li><span>76743</span><em class="list_icon top jrsj_plus li_sec" bookid="737385" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/737385.html" target="_blank" title="乱世枭雄">乱世枭雄</a>
+										<a href="GetBookInfoController?bookName=朝天阙" target="_blank">朝天阙</a>
 									</li>
 
 									<li><span>15036</span><em class="list_icon top jrsj_plus li_sec" bookid="691985" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/691985.html" target="_blank" title="朝天阙">朝天阙</a>
+										<a href="GetBookInfoController?bookName=朝天阙" target="_blank">朝天阙</a>
 									</li>
 
 									<li><span>12056</span><em class="list_icon jrsj_plus li_sec" bookid="742723" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/742723.html" target="_blank" title="宋疆">宋疆</a>
+										<a href="GetBookInfoController?bookName=朝天阙" target="_blank">朝天阙</a>
 									</li>
 
 									<li><span>7216</span><em class="list_icon jrsj_plus" bookid="683061" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/683061.html" target="_blank" title="大明春色">大明春色</a>
+										<a href="GetBookInfoController?bookName=朝天阙" target="_blank">朝天阙</a>
 									</li>
 
 									<li><span>7142</span><em class="list_icon jrsj_plus" bookid="747843" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/747843.html" target="_blank" title="楚臣">楚臣</a>
+										<a href="GetBookInfoController?bookName=朝天阙" target="_blank">朝天阙</a>
 									</li>
 
 									<li><span>5603</span><em class="list_icon jrsj_plus" bookid="69507" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/69507.html" target="_blank" title="宰执天下">宰执天下</a>
+										<a href="GetBookInfoController?bookName=朝天阙" target="_blank">朝天阙</a>
 									</li>
 
 									<li><span>4313</span><em class="list_icon jrsj_plus" bookid="490607" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/490607.html" target="_blank" title="大明1617">大明1617</a>
+										<a href="GetBookInfoController?bookName=朝天阙" target="_blank">朝天阙</a>
 									</li>
 
 									<li><span>2233</span><em class="list_icon jrsj_plus" bookid="612328" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/612328.html" target="_blank" title="唐谋天下">唐谋天下</a>
+										<a href="GetBookInfoController?bookName=朝天阙" target="_blank">朝天阙</a>
 									</li>
 
 									<li class="last"><span>1840</span><em class="list_icon jrsj_plus" bookid="44202" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/44202.html" target="_blank" title="枭臣">枭臣</a>
+										<a href="GetBookInfoController?bookName=朝天阙" target="_blank">朝天阙</a>
 									</li>
 
 								</ul>
@@ -967,43 +940,43 @@
 								<ul>
 
 									<li><span>3010989</span><em class="list_icon top jrsj_plus" bookid="510426" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/510426.html" target="_blank" title="锦衣春秋">锦衣春秋</a>
+										<a href="GetBookInfoController?bookName=大明春色" target="_blank">大明春色</a>
 									</li>
 
 									<li><span>805184</span><em class="list_icon top jrsj_plus" bookid="737385" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/737385.html" target="_blank" title="乱世枭雄">乱世枭雄</a>
+										<a href="GetBookInfoController?bookName=大明春色" target="_blank">大明春色</a>
 									</li>
 
 									<li><span>171480</span><em class="list_icon top jrsj_plus" bookid="691985" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/691985.html" target="_blank" title="朝天阙">朝天阙</a>
+										<a href="GetBookInfoController?bookName=大明春色" target="_blank">大明春色</a>
 									</li>
 
 									<li><span>127357</span><em class="list_icon jrsj_plus" bookid="683061" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/683061.html" target="_blank" title="大明春色">大明春色</a>
+										<a href="GetBookInfoController?bookName=大明春色" target="_blank">大明春色</a>
 									</li>
 
 									<li><span>98177</span><em class="list_icon jrsj_plus" bookid="742723" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/742723.html" target="_blank" title="宋疆">宋疆</a>
+										<a href="GetBookInfoController?bookName=大明春色" target="_blank">大明春色</a>
 									</li>
 
 									<li><span>75749</span><em class="list_icon jrsj_plus" bookid="490607" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/490607.html" target="_blank" title="大明1617">大明1617</a>
+										<a href="GetBookInfoController?bookName=大明春色" target="_blank">大明春色</a>
 									</li>
 
 									<li><span>71723</span><em class="list_icon jrsj_plus" bookid="69507" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/69507.html" target="_blank" title="宰执天下">宰执天下</a>
+										<a href="GetBookInfoController?bookName=大明春色" target="_blank">大明春色</a>
 									</li>
 
 									<li><span>40789</span><em class="list_icon jrsj_plus" bookid="612328" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/612328.html" target="_blank" title="唐谋天下">唐谋天下</a>
+										<a href="GetBookInfoController?bookName=大明春色" target="_blank">大明春色</a>
 									</li>
 
 									<li><span>34593</span><em class="list_icon jrsj_plus" bookid="521106" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/521106.html" target="_blank" title="三国之无限乱入">三国之无限乱入</a>
+										<a href="GetBookInfoController?bookName=大明春色" target="_blank">大明春色</a>
 									</li>
 
 									<li class="last"><span>31556</span><em class="list_icon jrsj_plus" bookid="44202" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/44202.html" target="_blank" title="枭臣">枭臣</a>
+										<a href="GetBookInfoController?bookName=大明春色" target="_blank">大明春色</a>
 									</li>
 
 								</ul>
@@ -1030,43 +1003,43 @@
 								<ul>
 
 									<li><span>207843</span><em class="list_icon top jrsj_plus" bookid="730066" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/730066.html" target="_blank" title="点道为止">点道为止</a>
+										<a href="GetBookInfoController?bookName=医等狂兵" target="_blank">医等狂兵</a>
 									</li>
 
 									<li><span>200949</span><em class="list_icon top jrsj_plus" bookid="665301" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/665301.html" target="_blank" title="医等狂兵">医等狂兵</a>
+										<a href="GetBookInfoController?bookName=医等狂兵" target="_blank">医等狂兵</a>
 									</li>
 
 									<li><span>182593</span><em class="list_icon top jrsj_plus" bookid="603738" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/603738.html" target="_blank" title="妙医鸿途">妙医鸿途</a>
+										<a href="GetBookInfoController?bookName=医等狂兵" target="_blank">医等狂兵</a>
 									</li>
 
 									<li><span>175583</span><em class="list_icon jrsj_plus" bookid="512263" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/512263.html" target="_blank" title="超品战兵">超品战兵</a>
+										<a href="GetBookInfoController?bookName=医等狂兵" target="_blank">医等狂兵</a>
 									</li>
 
 									<li><span>172749</span><em class="list_icon jrsj_plus" bookid="635570" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/635570.html" target="_blank" title="医品宗师">医品宗师</a>
+										<a href="GetBookInfoController?bookName=医等狂兵" target="_blank">医等狂兵</a>
 									</li>
 
 									<li><span>172395</span><em class="list_icon jrsj_plus" bookid="632434" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/632434.html" target="_blank" title="最强逆袭">最强逆袭</a>
+										<a href="GetBookInfoController?bookName=医等狂兵" target="_blank">医等狂兵</a>
 									</li>
 
 									<li><span>71753</span><em class="list_icon jrsj_plus" bookid="714691" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/714691.html" target="_blank" title="绝命毒尸">绝命毒尸</a>
+										<a href="GetBookInfoController?bookName=医等狂兵" target="_blank">医等狂兵</a>
 									</li>
 
 									<li><span>17705</span><em class="list_icon jrsj_plus" bookid="732001" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/732001.html" target="_blank" title="开个诊所来修仙">开个诊所来修仙</a>
+										<a href="GetBookInfoController?bookName=医等狂兵" target="_blank">医等狂兵</a>
 									</li>
 
 									<li><span>9465</span><em class="list_icon jrsj_plus" bookid="745297" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/745297.html" target="_blank" title="春雷1979">春雷1979</a>
+										<a href="GetBookInfoController?bookName=医等狂兵" target="_blank">医等狂兵</a>
 									</li>
 
 									<li class="last"><span>9365</span><em class="list_icon jrsj_plus" bookid="745795" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/745795.html" target="_blank" title="武踏星河">武踏星河</a>
+										<a href="GetBookInfoController?bookName=医等狂兵" target="_blank">医等狂兵</a>
 									</li>
 
 								</ul>
@@ -1078,43 +1051,43 @@
 								<ul>
 
 									<li><span>824677</span><em class="list_icon top jrsj_plus" bookid="730066" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/730066.html" target="_blank" title="点道为止">点道为止</a>
+										<a href="GetBookInfoController?bookName=超品战兵" target="_blank">超品战兵</a>
 									</li>
 
 									<li><span>723359</span><em class="list_icon top jrsj_plus li_sec" bookid="603738" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/603738.html" target="_blank" title="妙医鸿途">妙医鸿途</a>
+										<a href="GetBookInfoController?bookName=超品战兵" target="_blank">超品战兵</a>
 									</li>
 
 									<li><span>690979</span><em class="list_icon top jrsj_plus li_sec" bookid="512263" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/512263.html" target="_blank" title="超品战兵">超品战兵</a>
+										<a href="GetBookInfoController?bookName=超品战兵" target="_blank">超品战兵</a>
 									</li>
 
 									<li><span>631823</span><em class="list_icon jrsj_plus li_sec" bookid="632434" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/632434.html" target="_blank" title="最强逆袭">最强逆袭</a>
+										<a href="GetBookInfoController?bookName=超品战兵" target="_blank">超品战兵</a>
 									</li>
 
 									<li><span>630063</span><em class="list_icon jrsj_plus li_sec" bookid="635570" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/635570.html" target="_blank" title="医品宗师">医品宗师</a>
+										<a href="GetBookInfoController?bookName=超品战兵" target="_blank">超品战兵</a>
 									</li>
 
 									<li><span>428094</span><em class="list_icon jrsj_plus li_sec" bookid="665301" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/665301.html" target="_blank" title="医等狂兵">医等狂兵</a>
+										<a href="GetBookInfoController?bookName=超品战兵" target="_blank">超品战兵</a>
 									</li>
 
 									<li><span>155799</span><em class="list_icon jrsj_plus li_sec" bookid="714691" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/714691.html" target="_blank" title="绝命毒尸">绝命毒尸</a>
+										<a href="GetBookInfoController?bookName=超品战兵" target="_blank">超品战兵</a>
 									</li>
 
 									<li><span>141081</span><em class="list_icon jrsj_plus li_sec" bookid="411993" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/411993.html" target="_blank" title="最强狂兵">最强狂兵</a>
+										<a href="GetBookInfoController?bookName=超品战兵" target="_blank">超品战兵</a>
 									</li>
 
 									<li><span>125712</span><em class="list_icon jrsj_plus li_sec" bookid="732001" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/732001.html" target="_blank" title="开个诊所来修仙">开个诊所来修仙</a>
+										<a href="GetBookInfoController?bookName=超品战兵" target="_blank">超品战兵</a>
 									</li>
 
 									<li class="last"><span>30992</span><em class="list_icon jrsj_plus" bookid="745795" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/745795.html" target="_blank" title="武踏星河">武踏星河</a>
+										<a href="GetBookInfoController?bookName=超品战兵" target="_blank">超品战兵</a>
 									</li>
 
 								</ul>
@@ -1126,43 +1099,43 @@
 								<ul>
 
 									<li><span>11840083</span><em class="list_icon top jrsj_plus" bookid="730066" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/730066.html" target="_blank" title="点道为止">点道为止</a>
+										<a href="GetBookInfoController?bookName=最强逆袭" target="_blank">最强逆袭</a>
 									</li>
 
 									<li><span>10443313</span><em class="list_icon top jrsj_plus" bookid="603738" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/603738.html" target="_blank" title="妙医鸿途">妙医鸿途</a>
+										<a href="GetBookInfoController?bookName=最强逆袭" target="_blank">最强逆袭</a>
 									</li>
 
 									<li><span>10360269</span><em class="list_icon top jrsj_plus" bookid="512263" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/512263.html" target="_blank" title="超品战兵">超品战兵</a>
+										<a href="GetBookInfoController?bookName=最强逆袭" target="_blank">最强逆袭</a>
 									</li>
 
 									<li><span>8939667</span><em class="list_icon jrsj_plus" bookid="632434" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/632434.html" target="_blank" title="最强逆袭">最强逆袭</a>
+										<a href="GetBookInfoController?bookName=最强逆袭" target="_blank">最强逆袭</a>
 									</li>
 
 									<li><span>8359115</span><em class="list_icon jrsj_plus" bookid="732001" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/732001.html" target="_blank" title="开个诊所来修仙">开个诊所来修仙</a>
+										<a href="GetBookInfoController?bookName=最强逆袭" target="_blank">最强逆袭</a>
 									</li>
 
 									<li><span>8212467</span><em class="list_icon jrsj_plus" bookid="635570" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/635570.html" target="_blank" title="医品宗师">医品宗师</a>
+										<a href="GetBookInfoController?bookName=最强逆袭" target="_blank">最强逆袭</a>
 									</li>
 
 									<li><span>4421377</span><em class="list_icon jrsj_plus" bookid="665301" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/665301.html" target="_blank" title="医等狂兵">医等狂兵</a>
+										<a href="GetBookInfoController?bookName=最强逆袭" target="_blank">最强逆袭</a>
 									</li>
 
 									<li><span>2477133</span><em class="list_icon jrsj_plus" bookid="411993" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/411993.html" target="_blank" title="最强狂兵">最强狂兵</a>
+										<a href="GetBookInfoController?bookName=最强逆袭" target="_blank">最强逆袭</a>
 									</li>
 
 									<li><span>1744497</span><em class="list_icon jrsj_plus" bookid="714691" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/714691.html" target="_blank" title="绝命毒尸">绝命毒尸</a>
+										<a href="GetBookInfoController?bookName=最强逆袭" target="_blank">最强逆袭</a>
 									</li>
 
 									<li class="last"><span>426023</span><em class="list_icon jrsj_plus" bookid="490372" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/490372.html" target="_blank" title="近身狂兵">近身狂兵</a>
+										<a href="GetBookInfoController?bookName=最强逆袭" target="_blank">最强逆袭</a>
 									</li>
 
 								</ul>
@@ -1188,43 +1161,43 @@
 								<ul>
 
 									<li><span>10</span><em class="list_icon top jrsj_plus" bookid="732198" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/732198.html" target="_blank" title="海贼王之我就是随便写写">海贼王之我就是随便写写</a>
+										<a href="GetBookInfoController?bookName=绿茵风暴" target="_blank">绿茵风暴</a>
 									</li>
 
 									<li><span>5</span><em class="list_icon top jrsj_plus" bookid="747287" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/747287.html" target="_blank" title="绿茵风暴">绿茵风暴</a>
+										<a href="GetBookInfoController?bookName=绿茵风暴" target="_blank">绿茵风暴</a>
 									</li>
 
 									<li><span>5</span><em class="list_icon top jrsj_plus" bookid="157948" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/157948.html" target="_blank" title="调教诛仙">调教诛仙</a>
+										<a href="GetBookInfoController?bookName=绿茵风暴" target="_blank">绿茵风暴</a>
 									</li>
 
 									<li><span>4</span><em class="list_icon jrsj_plus" bookid="727807" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/727807.html" target="_blank" title="龙珠之我不是赛亚人">龙珠之我不是赛亚人</a>
+										<a href="GetBookInfoController?bookName=绿茵风暴" target="_blank">绿茵风暴</a>
 									</li>
 
 									<li><span>3</span><em class="list_icon jrsj_plus" bookid="745505" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/745505.html" target="_blank" title="英雄联盟之逆袭王者">英雄联盟之逆袭王者</a>
+										<a href="GetBookInfoController?bookName=绿茵风暴" target="_blank">绿茵风暴</a>
 									</li>
 
 									<li><span>3</span><em class="list_icon jrsj_plus" bookid="746629" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/746629.html" target="_blank" title="我的足球帝国">我的足球帝国</a>
+										<a href="GetBookInfoController?bookName=绿茵风暴" target="_blank">绿茵风暴</a>
 									</li>
 
 									<li><span>2</span><em class="list_icon jrsj_plus" bookid="742299" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/742299.html" target="_blank" title="次元轮回">次元轮回</a>
+										<a href="GetBookInfoController?bookName=绿茵风暴" target="_blank">绿茵风暴</a>
 									</li>
 
 									<li><span>2</span><em class="list_icon jrsj_plus" bookid="184224" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/184224.html" target="_blank" title="圣斗士星矢Hero">圣斗士星矢Hero</a>
+										<a href="GetBookInfoController?bookName=绿茵风暴" target="_blank">绿茵风暴</a>
 									</li>
 
 									<li><span>2</span><em class="list_icon jrsj_plus" bookid="356498" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/356498.html" target="_blank" title="梦三国之卷土重来">梦三国之卷土重来</a>
+										<a href="GetBookInfoController?bookName=绿茵风暴" target="_blank">绿茵风暴</a>
 									</li>
 
 									<li class="last"><span>2</span><em class="list_icon jrsj_plus" bookid="749563" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/749563.html" target="_blank" title="少年三国志征文：弃玺">少年三国志征文：弃玺</a>
+										<a href="GetBookInfoController?bookName=绿茵风暴" target="_blank">绿茵风暴</a>
 									</li>
 
 								</ul>
@@ -1236,43 +1209,43 @@
 								<ul>
 
 									<li><span>469</span><em class="list_icon top jrsj_plus" bookid="157948" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/157948.html" target="_blank" title="调教诛仙">调教诛仙</a>
+										<a href="GetBookInfoController?bookName=重生之火影世界" target="_blank">重生之火影世界</a>
 									</li>
 
 									<li><span>320</span><em class="list_icon top jrsj_plus" bookid="529708" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/529708.html" target="_blank" title="重生之火影世界">重生之火影世界</a>
+										<a href="GetBookInfoController?bookName=重生之火影世界" target="_blank">重生之火影世界</a>
 									</li>
 
 									<li><span>230</span><em class="list_icon top jrsj_plus" bookid="105574" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/105574.html" target="_blank" title="火影之掌控六道">火影之掌控六道</a>
+										<a href="GetBookInfoController?bookName=重生之火影世界" target="_blank">重生之火影世界</a>
 									</li>
 
 									<li><span>209</span><em class="list_icon jrsj_plus" bookid="99953" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/99953.html" target="_blank" title="海贼王之圣手">海贼王之圣手</a>
+										<a href="GetBookInfoController?bookName=重生之火影世界" target="_blank">重生之火影世界</a>
 									</li>
 
 									<li><span>202</span><em class="list_icon jrsj_plus" bookid="150471" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/150471.html" target="_blank" title="穿越笑傲江湖">穿越笑傲江湖</a>
+										<a href="GetBookInfoController?bookName=重生之火影世界" target="_blank">重生之火影世界</a>
 									</li>
 
 									<li><span>189</span><em class="list_icon jrsj_plus" bookid="195804" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/195804.html" target="_blank" title="诛仙逍遥">诛仙逍遥</a>
+										<a href="GetBookInfoController?bookName=重生之火影世界" target="_blank">重生之火影世界</a>
 									</li>
 
 									<li><span>188</span><em class="list_icon jrsj_plus" bookid="298567" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/298567.html" target="_blank" title="射雕之狂风快剑">射雕之狂风快剑</a>
+										<a href="GetBookInfoController?bookName=重生之火影世界" target="_blank">重生之火影世界</a>
 									</li>
 
 									<li><span>160</span><em class="list_icon jrsj_plus" bookid="172528" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/172528.html" target="_blank" title="木下之影">木下之影</a>
+										<a href="GetBookInfoController?bookName=重生之火影世界" target="_blank">重生之火影世界</a>
 									</li>
 
 									<li><span>151</span><em class="list_icon jrsj_plus" bookid="646409" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/646409.html" target="_blank" title="狼人杀">狼人杀</a>
+										<a href="GetBookInfoController?bookName=重生之火影世界" target="_blank">重生之火影世界</a>
 									</li>
 
 									<li class="last"><span>141</span><em class="list_icon jrsj_plus" bookid="366302" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/366302.html" target="_blank" title="海贼王之大将意志">海贼王之大将意志</a>
+										<a href="GetBookInfoController?bookName=重生之火影世界" target="_blank">重生之火影世界</a>
 									</li>
 
 								</ul>
@@ -1284,43 +1257,43 @@
 								<ul>
 
 									<li><span>9552</span><em class="list_icon top jrsj_plus" bookid="157948" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/157948.html" target="_blank" title="调教诛仙">调教诛仙</a>
+										<a href="GetBookInfoController?bookName=诛仙逍遥" target="_blank">诛仙逍遥</a>
 									</li>
 
 									<li><span>6147</span><em class="list_icon top jrsj_plus" bookid="529708" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/529708.html" target="_blank" title="重生之火影世界">重生之火影世界</a>
+										<a href="GetBookInfoController?bookName=诛仙逍遥" target="_blank">诛仙逍遥</a>
 									</li>
 
 									<li><span>4204</span><em class="list_icon top jrsj_plus" bookid="195804" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/195804.html" target="_blank" title="诛仙逍遥">诛仙逍遥</a>
+										<a href="GetBookInfoController?bookName=诛仙逍遥" target="_blank">诛仙逍遥</a>
 									</li>
 
 									<li><span>4128</span><em class="list_icon jrsj_plus" bookid="105574" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/105574.html" target="_blank" title="火影之掌控六道">火影之掌控六道</a>
+										<a href="GetBookInfoController?bookName=诛仙逍遥" target="_blank">诛仙逍遥</a>
 									</li>
 
 									<li><span>4034</span><em class="list_icon jrsj_plus" bookid="298567" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/298567.html" target="_blank" title="射雕之狂风快剑">射雕之狂风快剑</a>
+										<a href="GetBookInfoController?bookName=诛仙逍遥" target="_blank">诛仙逍遥</a>
 									</li>
 
 									<li><span>3505</span><em class="list_icon jrsj_plus" bookid="150471" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/150471.html" target="_blank" title="穿越笑傲江湖">穿越笑傲江湖</a>
+										<a href="GetBookInfoController?bookName=诛仙逍遥" target="_blank">诛仙逍遥</a>
 									</li>
 
 									<li><span>3121</span><em class="list_icon jrsj_plus" bookid="99953" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/99953.html" target="_blank" title="海贼王之圣手">海贼王之圣手</a>
+										<a href="GetBookInfoController?bookName=诛仙逍遥" target="_blank">诛仙逍遥</a>
 									</li>
 
 									<li><span>3081</span><em class="list_icon jrsj_plus" bookid="172528" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/172528.html" target="_blank" title="木下之影">木下之影</a>
+										<a href="GetBookInfoController?bookName=诛仙逍遥" target="_blank">诛仙逍遥</a>
 									</li>
 
 									<li><span>2341</span><em class="list_icon jrsj_plus" bookid="193114" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/193114.html" target="_blank" title="重生雷杰多">重生雷杰多</a>
+										<a href="GetBookInfoController?bookName=诛仙逍遥" target="_blank">诛仙逍遥</a>
 									</li>
 
 									<li class="last"><span>2322</span><em class="list_icon jrsj_plus" bookid="646409" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/646409.html" target="_blank" title="狼人杀">狼人杀</a>
+										<a href="GetBookInfoController?bookName=诛仙逍遥" target="_blank">诛仙逍遥</a>
 									</li>
 
 								</ul>
@@ -1346,43 +1319,43 @@
 								<ul>
 
 									<li><span>5774</span><em class="list_icon top jrsj_plus" bookid="729221" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/729221.html" target="_blank" title="时空神兵">时空神兵</a>
+										<a href="GetBookInfoController?bookName=网游之梦幻法师" target="_blank">网游之梦幻法师</a>
 									</li>
 
 									<li><span>447</span><em class="list_icon top jrsj_plus" bookid="305236" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/305236.html" target="_blank" title="网游之梦幻法师">网游之梦幻法师</a>
+										<a href="GetBookInfoController?bookName=网游之梦幻法师" target="_blank">网游之梦幻法师</a>
 									</li>
 
 									<li><span>88</span><em class="list_icon top jrsj_plus" bookid="747413" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/747413.html" target="_blank" title="末土纪元">末土纪元</a>
+										<a href="GetBookInfoController?bookName=网游之梦幻法师" target="_blank">网游之梦幻法师</a>
 									</li>
 
 									<li><span>78</span><em class="list_icon jrsj_plus" bookid="325639" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/325639.html" target="_blank" title="星辰之主">星辰之主</a>
+										<a href="GetBookInfoController?bookName=网游之梦幻法师" target="_blank">网游之梦幻法师</a>
 									</li>
 
 									<li><span>71</span><em class="list_icon jrsj_plus" bookid="666143" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/666143.html" target="_blank" title="无穷重阻">无穷重阻</a>
+										<a href="GetBookInfoController?bookName=网游之梦幻法师" target="_blank">网游之梦幻法师</a>
 									</li>
 
 									<li><span>64</span><em class="list_icon jrsj_plus" bookid="744178" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/744178.html" target="_blank" title="EVE之回家的路">EVE之回家的路</a>
+										<a href="GetBookInfoController?bookName=网游之梦幻法师" target="_blank">网游之梦幻法师</a>
 									</li>
 
 									<li><span>33</span><em class="list_icon jrsj_plus" bookid="702610" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/702610.html" target="_blank" title="走出未来">走出未来</a>
+										<a href="GetBookInfoController?bookName=网游之梦幻法师" target="_blank">网游之梦幻法师</a>
 									</li>
 
 									<li><span>29</span><em class="list_icon jrsj_plus" bookid="673218" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/673218.html" target="_blank" title="末日崛起">末日崛起</a>
+										<a href="GetBookInfoController?bookName=网游之梦幻法师" target="_blank">网游之梦幻法师</a>
 									</li>
 
 									<li><span>22</span><em class="list_icon jrsj_plus" bookid="749194" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/749194.html" target="_blank" title="沉默之王">沉默之王</a>
+									<a href="GetBookInfoController?bookName=网游之梦幻法师" target="_blank">网游之梦幻法师</a>
 									</li>
 
 									<li class="last"><span>18</span><em class="list_icon jrsj_plus" bookid="718689" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/718689.html" target="_blank" title="踏星">踏星</a>
+										<a href="GetBookInfoController?bookName=网游之梦幻法师" target="_blank">网游之梦幻法师</a>
 									</li>
 
 								</ul>
@@ -1394,43 +1367,43 @@
 								<ul>
 
 									<li><span>13410</span><em class="list_icon top jrsj_plus" bookid="729221" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/729221.html" target="_blank" title="时空神兵">时空神兵</a>
+										<a href="GetBookInfoController?bookName=无穷重阻" target="_blank">无穷重阻</a>
 									</li>
 
 									<li><span>3741</span><em class="list_icon top jrsj_plus" bookid="666143" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/666143.html" target="_blank" title="无穷重阻">无穷重阻</a>
+										<a href="GetBookInfoController?bookName=无穷重阻" target="_blank">无穷重阻</a>
 									</li>
 
 									<li><span>2729</span><em class="list_icon top jrsj_plus" bookid="325639" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/325639.html" target="_blank" title="星辰之主">星辰之主</a>
+										<a href="GetBookInfoController?bookName=无穷重阻" target="_blank">无穷重阻</a>
 									</li>
 
 									<li><span>2219</span><em class="list_icon jrsj_plus" bookid="89994" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/89994.html" target="_blank" title="网游之邪龙逆天">网游之邪龙逆天</a>
+										<a href="GetBookInfoController?bookName=无穷重阻" target="_blank">无穷重阻</a>
 									</li>
 
 									<li><span>1708</span><em class="list_icon jrsj_plus" bookid="660107" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/660107.html" target="_blank" title="末日岩帝">末日岩帝</a>
+										<a href="GetBookInfoController?bookName=无穷重阻" target="_blank">无穷重阻</a>
 									</li>
 
 									<li><span>1524</span><em class="list_icon jrsj_plus" bookid="718689" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/718689.html" target="_blank" title="踏星">踏星</a>
+										<a href="GetBookInfoController?bookName=无穷重阻" target="_blank">无穷重阻</a>
 									</li>
 
 									<li><span>1463</span><em class="list_icon jrsj_plus" bookid="56579" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/56579.html" target="_blank" title="无尽武装">无尽武装</a>
+										<a href="GetBookInfoController?bookName=无穷重阻" target="_blank">无穷重阻</a>
 									</li>
 
 									<li><span>1249</span><em class="list_icon jrsj_plus" bookid="621400" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/621400.html" target="_blank" title="末日曙光">末日曙光</a>
+										<a href="GetBookInfoController?bookName=无穷重阻" target="_blank">无穷重阻</a>
 									</li>
 
 									<li><span>1185</span><em class="list_icon jrsj_plus" bookid="305236" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/305236.html" target="_blank" title="网游之梦幻法师">网游之梦幻法师</a>
+										<a href="GetBookInfoController?bookName=无穷重阻" target="_blank">无穷重阻</a>
 									</li>
 
 									<li class="last"><span>1172</span><em class="list_icon jrsj_plus" bookid="111285" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/111285.html" target="_blank" title="末世求生录">末世求生录</a>
+										<a href="GetBookInfoController?bookName=无穷重阻" target="_blank">无穷重阻</a>
 									</li>
 
 								</ul>
@@ -1442,43 +1415,43 @@
 								<ul>
 
 									<li><span>164059</span><em class="list_icon top jrsj_plus" bookid="729221" order="1" title="加入书架">1</em>
-										<a href="http://book.zongheng.com/book/729221.html" target="_blank" title="时空神兵">时空神兵</a>
+										<a href="GetBookInfoController?bookName=星辰之主" target="_blank">星辰之主</a>
 									</li>
 
 									<li><span>56265</span><em class="list_icon top jrsj_plus" bookid="666143" order="2" title="加入书架">2</em>
-										<a href="http://book.zongheng.com/book/666143.html" target="_blank" title="无穷重阻">无穷重阻</a>
+										<a href="GetBookInfoController?bookName=星辰之主" target="_blank">星辰之主</a>
 									</li>
 
 									<li><span>43663</span><em class="list_icon top jrsj_plus" bookid="325639" order="3" title="加入书架">3</em>
-										<a href="http://book.zongheng.com/book/325639.html" target="_blank" title="星辰之主">星辰之主</a>
+										<a href="GetBookInfoController?bookName=星辰之主" target="_blank">星辰之主</a>
 									</li>
 
 									<li><span>39655</span><em class="list_icon jrsj_plus" bookid="89994" order="4" title="加入书架">4</em>
-										<a href="http://book.zongheng.com/book/89994.html" target="_blank" title="网游之邪龙逆天">网游之邪龙逆天</a>
+										<a href="GetBookInfoController?bookName=星辰之主" target="_blank">星辰之主</a>
 									</li>
 
 									<li><span>30425</span><em class="list_icon jrsj_plus" bookid="660107" order="5" title="加入书架">5</em>
-										<a href="http://book.zongheng.com/book/660107.html" target="_blank" title="末日岩帝">末日岩帝</a>
+										<a href="GetBookInfoController?bookName=星辰之主" target="_blank">星辰之主</a>
 									</li>
 
 									<li><span>28685</span><em class="list_icon jrsj_plus" bookid="718689" order="6" title="加入书架">6</em>
-										<a href="http://book.zongheng.com/book/718689.html" target="_blank" title="踏星">踏星</a>
+										<a href="GetBookInfoController?bookName=星辰之主" target="_blank">星辰之主</a>
 									</li>
 
 									<li><span>27513</span><em class="list_icon jrsj_plus" bookid="230648" order="7" title="加入书架">7</em>
-										<a href="http://book.zongheng.com/book/230648.html" target="_blank" title="末世黑暗纪">末世黑暗纪</a>
+										<a href="GetBookInfoController?bookName=星辰之主" target="_blank">星辰之主</a>
 									</li>
 
 									<li><span>26170</span><em class="list_icon jrsj_plus" bookid="56579" order="8" title="加入书架">8</em>
-										<a href="http://book.zongheng.com/book/56579.html" target="_blank" title="无尽武装">无尽武装</a>
+										<a href="GetBookInfoController?bookName=星辰之主" target="_blank">星辰之主</a>
 									</li>
 
 									<li><span>24192</span><em class="list_icon jrsj_plus" bookid="413680" order="9" title="加入书架">9</em>
-										<a href="http://book.zongheng.com/book/413680.html" target="_blank" title="网游之野望">网游之野望</a>
+										<a href="GetBookInfoController?bookName=星辰之主" target="_blank">星辰之主</a>
 									</li>
 
 									<li class="last"><span>19905</span><em class="list_icon jrsj_plus" bookid="621851" order="10" title="加入书架">10</em>
-										<a href="http://book.zongheng.com/book/621851.html" target="_blank" title="英雄联盟之奇迹时代">英雄联盟之奇迹时代</a>
+										<a href="GetBookInfoController?bookName=星辰之主" target="_blank">星辰之主</a>
 									</li>
 
 								</ul>
@@ -1492,102 +1465,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-            <div class="footer_wrap">
-                <div class="footer_logo">
-                </div>
-                <div class="link_friends">
-                    	友情链接
-                </div>
-                <ul class="link_con">
-                    <li>
-                        <a href="##">Vsensory</a>
-                    </li>
-                    <li>
-                        <a href="##">VR之家</a>
-                    </li>
-                    <li>
-                        <a href="##">VR兔</a>
-                    </li>
-                    <li>
-                        <a href="##">83830</a>
-                    </li>
-                    <li>
-                        <a href="##">VR乐趣网</a>
-                    </li>
-                    <li>
-                        <a href="##">VR日报</a>
-                    </li>
-                    <li>
-                        <a href="##">17173</a>
-                    </li>
-                    <li>
-                        <a href="##">游戏陀螺</a>
-                    </li>
-                    <li>
-                        <a href="##">913</a>
-                    </li>
-                    <li>
-                        <a href="##">安卓网</a>
-                    </li>
-                    <li>
-                        <a href="##">好色VR</a>
-                    </li>
-                    <li>
-                        <a href="##">麦逗VR</a>
-                    </li>
-                    <li>
-                        <a href="##">妖界VR</a>
-                    </li>
-                    <li>
-                        <a href="##">黑匣</a>
-                    </li>
-                    <li>
-                        <a href="##">百度VR</a>
-                    </li>
-                    <li>
-                        <a href="##">Vreyes</a>
-                    </li>
-                    <li>
-                        <a>Vrpinea</a>
-                    </li>
-                    <li>
-                        <a href="##">游戏蛮牛</a>
-                    </li>
-                    <li>
-                        <a href="##">游迅网</a>
-                    </li>
-                    <li>
-                        <a>snailshell</a>
-                    </li>
-                    <li>
-                        <a href="##">VR界</a>
-                    </li>
-                    <li>
-                        <a href="##">87870</a>
-                    </li>
-                    <li>
-                        <a href="##">盗梦级客</a>
-                    </li>
-                    <li>
-                        <a href="##">07073VR</a>
-                    </li>
-                    <li>
-                        <a href="##">VR齐乐网</a>
-                    </li>
-                    <li>
-                        <a href="##">VR达科斯</a>
-                    </li>
-                    <li>
-                        <a href="##">18183VR </a>
-                    </li>
-                </ul>
-                <div class="footer_copyRight">
-                    <p>© 2016 上海紫乾网络科技有限公司 版权所有 上海市桂箐路65号新研大厦B座6层 联系电话: 021-64959021</P>
-                    <P>沪ICP备15053320号沪网文[2015]0851-231号</p>
-                </div>
-            </div>
-        </div>
 		<script type="text/javascript" src="view/js/ranking.js"></script>
 	</body>
 </html>

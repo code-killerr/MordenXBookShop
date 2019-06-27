@@ -33,7 +33,7 @@ public class DBHelper<T> {
      * */
     private void getConnection() throws SQLException{
     	if( conn == null || conn.isClosed()){
-    	 conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/mordenxshop","root","root");
+    	 conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/mordenxshop?characterEncoding=utf-8","root","root");
     	 }
     }
     /**

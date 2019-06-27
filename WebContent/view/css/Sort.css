@@ -1,4 +1,9 @@
-
+.all {
+	width: 100%;
+	min-height: 100%;
+	background: #000000;
+	overflow: auto;
+}
 .MiddleBottom{
 	border: 2px solid #FFFFFF;
 	height: 107px;
@@ -30,6 +35,7 @@
 	border: 2px solid #999999;
 	height: 96px;
 	width: 70px;
+	marg
 }
 .MiddleBottom .BookImg img{
 		width: 100%;
@@ -145,7 +151,7 @@
 .cont-block .ctabs .ctab .tab_list {
 	padding: 0 30px 0 10px;
 	line-height: 36px;
-	background: url(http://static.zongheng.com/v2013/images/qh.gif) repeat-x;
+	background: url(img/QQ截图20180619174632.png) repeat-x;
 	font-size: 14px;
 	cursor: pointer;
 }
@@ -231,7 +237,7 @@ a:active {
 }
 
 
-/* 图片切换 */
+/* 鍥剧墖鍒囨崲 */
 
 .scroll_pic {
 	height: 350px;
@@ -355,7 +361,7 @@ a:active {
 }
 
 
-/*reset及 clear*/
+/*reset鍙� clear*/
 
 body,
 div,
@@ -387,7 +393,7 @@ button {
 	padding: 0;
 	font-size: 12px;
 	color: #343434;
-	font-family: "宋体", Arial, Helvetica;
+	font-family: "瀹嬩綋", Arial, Helvetica;
 	word-wrap: break-word;
 }
 
@@ -496,7 +502,7 @@ textarea {
 
 .wrap {
 	width: 980px;
-	margin: 178px auto;
+	margin: 100px auto;
 }
 
 .tl {
@@ -588,7 +594,7 @@ textarea {
 }
 
 
-/*布局*/
+/*甯冨眬*/
 
 .three_side {
 	width: 215px;
@@ -633,7 +639,7 @@ textarea {
 }
 
 
-/*榜单*/
+/*姒滃崟*/
 
 .list {
 	position: relative;

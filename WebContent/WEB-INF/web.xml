@@ -8,8 +8,19 @@
     <filter-name>CharacterFiletr</filter-name>
     <filter-class>filter.CharacterFiletr</filter-class>
     <init-param>
-      <param-name>character</param-name>
+      <param-name>character</param-name> 
       <param-value>utf-8</param-value>
     </init-param>
   </filter>
+  
+  <servlet>  
+    <servlet-name>GetBookInfoController</servlet-name>  
+    <servlet-class>Controller.GetBookInfoController</servlet-class>  
+  </servlet>  
+    
+  <servlet-mapping>  
+    <servlet-name>GetBookInfoController</servlet-name>    
+    <url-pattern>/GetBookInfoController</url-pattern>  
+  </servlet-mapping>  
+     
 </web-app>

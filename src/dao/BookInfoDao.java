@@ -23,5 +23,16 @@ public class BookInfoDao {
 		return list;
 	} 
 	
+	public List<BookInfoModel> findByName(Object...objs) throws Exception{
+		try {
+			String sql="select * from bookinfo where bookname=?";
+			list=dbHelper.executeQuery(sql, new BookInfoMapper(), objs);
+		} catch (Exception e) {
+			throw e;
+		
+		}
+		return list;
+	}
+	
 	
 }

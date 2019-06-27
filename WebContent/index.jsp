@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%> 
 <!DOCTYPE html>
+
+
 <html lang="en">
 
 <head>
@@ -19,24 +24,35 @@
                 <li class="hd_li">
                     <a class="hdActive" href="#">主页</a>
                 </li><li class="hd_li"style="opacity: 1;">
-                    <a  href="Ranking.html">排行榜</a>
+                    <a  href="ranking.jsp">排行榜</a>
                 </li><li class="hd_li">
-                    <a  href="html/newslist.html">免费</a>
+                    <a  href="GetBookInfoController?bookType=免费">免费</a>
                 </li><li class="hd_li">
-                    <a  href="html/shoplist.html">完本</a>
+                    <a  href="GetBookInfoController?bookType=完本">完本</a>
                 </li><li class="hd_li">
-                    <a href="html/kfpt.html">现言青春</a>
+                    <a href="GetBookInfoController?bookType=现言青春">现言青春</a>
                 </li><li class="hd_li">
-                    <a href="html/contus.html">古言玄幻</a>
+                    <a href="GetBookInfoController?bookType=古言玄幻">古言玄幻</a>
                 </li><li class="hd_li">
-                    <a href="html/aboutme.html">神秘科幻</a>
+                    <a href="GetBookInfoController?bookType=神秘科幻">神秘科幻</a>
                 </li>
             </ul>
         </div>
+        
         <!--导航栏结束-->
         <div class="header_enter">
-             <a href="login.jsp"><span class="denter_span01">登录</span></a>
-            <a class="denter_span02" href="register.jsp">注册</a>
+        	<c:choose>
+        		<c:when test="${fn:length(userInfo)==0}">
+        		<a href="login.jsp"><span class="denter_span01">登录</span></a>
+        		<a class="denter_span02" href="register.jsp">注册</a>
+        		</c:when>
+            <c:otherwise>
+            	<c:forEach items="${userInfo }" var="item">
+					<a class="denter_span01" href="userInfo.jsp?userName=${item.username}"><span >${item.username}</span></a>
+        			<a class="denter_span02" href="leave.jsp">注销</a>
+    			</c:forEach>
+            </c:otherwise>
+            </c:choose>
         </div>
     </div>    
 <!--banner部分开始-->
@@ -156,13 +172,6 @@
     </div>
 
 
-				<!--end-->
-			</div>
-		<!--内容部分END-->
-		       
-        
-
-    </div>
 
 </body>
 </html>

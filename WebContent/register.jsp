@@ -84,13 +84,26 @@ body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体"; }
 		 
 <script type="text/javascript"> 
  
+var http = new XMLHttpRequest();
+var namejudge=true;
+function checkName(){
+	var username = document.getElementById("username").value;
+	//2:设置请求的路径
+	http.open("post","${pageContext.request.contextPath}/RegisterController?username="+username);
+	//3:设置请求头
+	http.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	//4:设置回调函数
+	http.onreadystatechange=callback;
+	//5:发出请求
+	http.send(null);	
+}
+ 
+ 
  function checkForm(){ 
-	if(checkUserName()==false || checkPassword()==false || ConfirmPassword()==false || checkEmail()==false){
+	if(checkUserName()==false || checkPassword()==false || ConfirmPassword()==false || checkEmail()==false || namejudge==false){
 		return false;
 	}
   } 
- 
- <!--验证是否为空-->
  
   //验证用户名   
   function checkUserName(){ 
@@ -104,19 +117,39 @@ body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体"; }
     return false; 
     } 
   if(!pattern.test(username.value)){ 
-	  var info="<span style="+"color:red; font-weight:bold "+">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp用户名不合法！！！</span>"
-	   errname.innerHTML=info 
+	var info="<span style="+"color:red; font-weight:bold "+">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp用户名至少为3位字符！！！</span>"
+	errname.innerHTML=info 
     errname.className="erro" 
     return false; 
-    } 
-   else{ 
-	 var info="<span style="+"color:green; font-weight:bold "+">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp用户名正确</span>"
+    }
+  if(checkName() && callback()){ 
+	 
+	 return false; 
+  }else{ 
+	 var info="<span style="+"color:green; font-weight:bold "+">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp用户名可以使用！！！</span>"
 	 errname.innerHTML=info
      errname.className="success"; 
      return true; 
      } 
   } 
 		
+  function callback(){
+		if(http.readyState==4){
+			if(http.status==200){
+				//获取服务器返回的结果
+				var res = http.responseText;
+				var info_1="<span style="+"color:red; font-weight:bold "+">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp用户名已存在！！！</span>"
+				if(res=="用户名已存在"){
+					var errname = document.getElementById('nameErr') 
+					var info="<span style="+"color:red; font-weight:bold "+">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp用户名已存在！！！</span>"
+					errname.innerHTML=info
+					errname.className="erro";
+					namejudge=false;
+				}else{
+				}
+			}
+		}
+  }
   
 //邮箱验证
   function checkEmail(){ 

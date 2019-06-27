@@ -7,7 +7,8 @@ public class BookInfoModel {
 	private String bookStatus;
 	private String bookImage;
 	private Double bookPrice;
-	
+	private String bookWriter;
+	private String bookPath;
 	
 	
 	public String getBookName() {
@@ -39,6 +40,18 @@ public class BookInfoModel {
 	}
 	public void setBookPrice(Double bookPrice) {
 		this.bookPrice = bookPrice;
+	}
+	public String getBookWriter() {
+		return bookWriter;
+	}
+	public void setBookWriter(String bookWriter) {
+		this.bookWriter = bookWriter;
+	}
+	public String getBookPath() {
+		return bookPath;
+	}
+	public void setBookPath(String bookPath) {
+		this.bookPath = bookPath;
 	}
 
 }

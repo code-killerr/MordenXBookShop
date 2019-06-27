@@ -14,6 +14,8 @@ public class BookInfoMapper implements IRowMapper<BookInfoModel> {
 		bookInfoModel.setBookStatus(rs.getString("bookstatus"));
 		bookInfoModel.setBookPrice(rs.getDouble("bookprice"));
 		bookInfoModel.setBookImage(rs.getString("bookimg"));
+		bookInfoModel.setBookWriter(rs.getString("bookwriter"));
+		bookInfoModel.setBookPath(rs.getString("bookpath"));
 		return bookInfoModel;
 	}
 

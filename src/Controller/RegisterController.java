@@ -1,6 +1,8 @@
 package Controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.annotation.WebServlet;
@@ -29,16 +31,23 @@ public class RegisterController extends HttpServlet {
 		String userEmail=request.getParameter("useremail");
 		String userName=request.getParameter("username");
 		String userPassword=request.getParameter("password");
+		//1:设置向客户的响应的内容类型
+		response.setContentType("text/html;charset=utf-8");
+		//2:创建向客户端浏览器响应的out对象
+		PrintWriter out = response.getWriter();
+		
 		RegisterService registerService=new RegisterService();
 		
 		if(!registerService.judgeExist(userName)) {
-			request.setAttribute("message", "用户名已存在");
-			request.getRequestDispatcher("register.jsp").forward(request, response);
+			out.print("用户名已存在");
+			out.flush();
+			out.close();
 			return ;
 		}else if(registerService.judgeScusse(userEmail,userName,userPassword)) {
 			request.setAttribute("message", "注册成功，即将前往登陆页面");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
+		
 	
 	}
 

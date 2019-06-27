@@ -12,7 +12,7 @@ public class UserInfoMapper implements IRowMapper<UserInfoModel>{
 		UserInfoModel userInfoModel =new UserInfoModel();
 		userInfoModel.setId(rs.getInt("id"));
 		userInfoModel.setUsername(rs.getString("username"));
-		userInfoModel.setUsername(rs.getString("useremail"));
+		userInfoModel.setUseremail(rs.getString("useremail"));
 		userInfoModel.setUserpass(rs.getString("password"));
 		return userInfoModel;
 	}
